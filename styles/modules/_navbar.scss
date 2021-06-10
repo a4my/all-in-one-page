@@ -1,0 +1,39 @@
+.header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+        border-radius: 30px;
+        width: 8rem;
+        height: 7rem;
+        padding: 1.5rem;
+        
+        &__text {
+            text-align: center;
+            text-transform: uppercase;
+            background: $gradient-primary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+
+    .clock {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &__container {
+            box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+            border-radius: 30px;
+            padding: 1rem;
+            font-size: 2rem;
+            color:  #39b385;
+            letter-spacing: 2px;
+        }
+    }
+}
+
