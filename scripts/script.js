@@ -29,7 +29,6 @@ setInterval(function() {
 ///////////////////////
 // Time
 
-// setInterval(function() {
     const dateDisplay = document.querySelector('.date__container')
     let date = new Date()
     let day = date.getUTCDay()
@@ -59,5 +58,85 @@ setInterval(function() {
     if(month === 11) { month = 'December'}
 
     dateDisplay.textContent = day + ' ' + number + ' ' + month + ' ' + year
-    console.log(number)
-// })
+
+
+
+
+//////////////////////////////
+// Wheather API
+
+link = 'https://api.openweathermap.org/data/2.5/weather?q=cahors&appid=bf8d15a80c89aa4f4c82ad6cbb3f5ac5'
+var request = new XMLHttpRequest()
+request.open('GET', link, true)
+request.onload = function() {
+    var obj = JSON.parse(this.response)
+    // console.log(obj)
+    document.getElementById('weather').innerHTML = obj.weather[0].description
+    // document.getElementById('location').innerHTML = obj.name
+    document.getElementById('temp').innerHTML = (obj.main.temp - 273.15).toFixed(1) + '°C'
+    document.getElementById('icon').src = "http://openweathermap.org/img/w/" + obj.weather[0].icon + '.png'
+}
+request.send()
+
+
+
+//////////////////////////////////
+// Crypto APIs
+
+// BTC stock
+
+let btcWS = new WebSocket('wss://stream.binance.com:9443/ws/btcgbp@trade')
+const btcPrice = document.querySelector('.btc__price')
+const btcPercent = document.querySelector('.btc__percent')
+
+btcWS.onmessage = (e) => {
+    let stockObject = JSON.parse(e.data)
+    btcPrice.innerHTML = parseFloat(stockObject.p).toFixed(2)
+    // btcPercent.innerHTML = parseFloat(stockObject.q).toFixed(2)
+} 
+
+// ETH stock
+
+let ethWS = new WebSocket('wss://stream.binance.com:9443/ws/ethgbp@trade')
+const ethPrice = document.querySelector('.eth__price')
+const ethPercent = document.querySelector('.eth__percent')
+
+ethWS.onmessage = (e) => {
+    let stockObject = JSON.parse(e.data)
+    ethPrice.innerHTML = parseFloat(stockObject.p).toFixed(2)
+    // ethPercent.innerHTML = parseFloat(stockObject.q).toFixed(2)
+} 
+
+// DOGE stock
+
+let dogeWS = new WebSocket('wss://stream.binance.com:9443/ws/dogegbp@trade')
+const dogePrice = document.querySelector('.doge__price')
+const dogePercent = document.querySelector('.doge__percent')
+
+dogeWS.onmessage = (e) => {
+    let stockObject = JSON.parse(e.data)
+    dogePrice.innerHTML = parseFloat(stockObject.p).toFixed(2)
+    // ethPercent.innerHTML = parseFloat(stockObject.q).toFixed(2)
+} 
+
+// ada stock
+
+let adaWS = new WebSocket('wss://stream.binance.com:9443/ws/adagbp@trade')
+const adaPrice = document.querySelector('.ada__price')
+const adaPercent = document.querySelector('.ada__percent')
+
+adaWS.onmessage = (e) => {
+    let stockObject = JSON.parse(e.data)
+    adaPrice.innerHTML = parseFloat(stockObject.p).toFixed(2)
+    // ethPercent.innerHTML = parseFloat(stockObject.q).toFixed(2)
+} 
+
+///////////////////////////////
+// Refresh page 
+
+// window.setInterval('refresh()', 3600000); 
+
+//   // Refresh or reload page after an hour
+//   function refresh() {
+//     window .location.reload();
+// }
