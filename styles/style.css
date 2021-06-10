@@ -96,4 +96,114 @@ body {
   color: #39b385;
   letter-spacing: 2px;
 }
+
+.header .dark-mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .dark-mode input {
+  height: 4rem;
+  width: 4rem;
+  -webkit-appearance: none;
+  -webkit-box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+          box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+  border-radius: 50%;
+  border: 8px solid #ecf0f3;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.header .dark-mode input::after {
+  font-family: 'Font Awesome 5 free';
+  content: '\f186';
+  color: #39b385;
+  font-size: 1.7rem;
+}
+
+.header .dark-mode input:checked {
+  -webkit-box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12), inset -10px -10px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+          box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12), inset -10px -10px 15px rgba(255, 255, 255, 0.5), inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #39b385;
+  -webkit-box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+          box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+  border-radius: 40px;
+  margin: 1rem 4rem;
+}
+
+.info .weather,
+.info .btc,
+.info .eth,
+.info .doge,
+.info .ada {
+  margin-right: 4rem;
+}
+
+.info .doge img,
+.info .ada img {
+  color: #39b385;
+  height: 2rem;
+  width: 2rem;
+}
+
+.info .weather__card,
+.info .eth__card,
+.info .btc__card,
+.info .doge__card,
+.info .ada__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.info .weather__card h4,
+.info .eth__card h4,
+.info .btc__card h4,
+.info .doge__card h4,
+.info .ada__card h4 {
+  text-transform: uppercase;
+  padding: 0 2rem;
+}
+
+.info .weather__card p,
+.info .eth__card p,
+.info .btc__card p,
+.info .doge__card p,
+.info .ada__card p {
+  font-size: 2rem;
+}
 /*# sourceMappingURL=style.css.map */
