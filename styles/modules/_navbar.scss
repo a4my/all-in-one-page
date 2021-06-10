@@ -33,6 +33,23 @@
             font-size: 2rem;
             color:  #39b385;
             letter-spacing: 2px;
+            width: 16rem;
+            text-align: center;
+        }
+    }
+
+    .date {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &__container {
+            box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+            border-radius: 30px;
+            padding: 1rem;
+            font-size: 2rem;
+            color:  #39b385;
+            letter-spacing: 2px;
         }
     }
 }
