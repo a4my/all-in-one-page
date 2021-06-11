@@ -66,7 +66,6 @@
     <main class="main-section">
         <div class="tool__container">
             <div class="calculator__card">
-                <!-- <div class="cal-box"> -->
                     <form name="calculator">
                         <input id="display" type="text" name="display" placeholder="0" readonly>
                         <br>
@@ -90,9 +89,57 @@
                         <input type="button" class="button mathbutton" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
                         <input type="button" class="button mathbutton" value="/" onclick="calculator.display.value += '/'">
                     </form>
-                <!-- </div> -->
             </div>
-            <div class="music__card"></div>
+            <div class="music__card">
+                <div class="top-bar">
+                    <i class="fas fa-chevron-down"></i>
+                    <span>Now Playing</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="img-area">
+                    <img src="/img/music-1.jpg" alt="">
+                </div>
+                <div class="song-details">
+                    <p class="name">Wanna Get Free</p>
+                    <p class="artist">Shaka Ponk</p>
+                </div>
+                <div class="progress-area">
+                    <div class="progress-bar">
+                        <span></span>
+                    </div>
+                    <div class="timer">
+                        <span class="current">0:20</span>
+                        <span class="current">3:40</span>
+                    </div>
+                </div>
+                <div class="controls">
+                    <i id="repeat-plist" class="fas fa-redo"></i>
+                    <i id="prev" class="fas fa-step-backward"></i>
+                    <div class="play-pause">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <i id="next" class="fas fa-step-forward"></i>
+                    <i id="more-music" class="fas fa-list-ul"></i>
+                </div>
+                <div class="music-list">
+                    <div class="header">
+                        <div class="row">
+                            <i class="fas fa-list-ul"></i>
+                            <span>Music List</span>
+                        </div>
+                        <i id="close" class="fas fa-times"></i>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="row">
+                                <span>Shaka Ponk - Wanna Get Free</span>
+                                <p>Audio Library</p>
+                            </div>
+                            <span class="audio-duration">3:40</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="converter__card"></div>
             <div class="notes__card"></div>
         </div>
