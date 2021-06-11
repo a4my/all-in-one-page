@@ -13,7 +13,7 @@
         &__text {
             text-align: center;
             text-transform: uppercase;
-            color: #39b385;
+            color: $--primary-color;
             font-size: 1.5rem;
             font-weight: 700;
         }
@@ -29,7 +29,7 @@
             border-radius: 30px;
             padding: 1rem;
             font-size: 2rem;
-            color:  #39b385;
+            color:  $--primary-color;
             letter-spacing: 2px;
             width: 16rem;
             text-align: center;
@@ -46,7 +46,7 @@
             border-radius: 30px;
             padding: 1rem;
             font-size: 2rem;
-            color:  #39b385;
+            color:  $--primary-color;
             letter-spacing: 2px;
         }
     }
@@ -74,7 +74,7 @@
         input::after {
             font-family: 'Font Awesome 5 free';
             content: '\f186';
-            color: #39b385;
+            color: $--primary-color;
             font-size: 1.7rem;        
         }
 
