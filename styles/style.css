@@ -321,6 +321,7 @@ body {
 
 .main-section .tool__container .music__card i {
   cursor: pointer;
+  font-size: 1rem;
 }
 
 .main-section .tool__container .music__card .top-bar,
@@ -337,22 +338,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.main-section .tool__container .music__card .top-bar i,
-.main-section .tool__container .music__card .progress-area .timer i,
-.main-section .tool__container .music__card .controls i,
-.main-section .tool__container .music__card .music-list .header i,
-.main-section .tool__container .music__card .music-list li i {
-  font-size: 1.5rem;
-}
-
-.main-section .tool__container .music__card .top-bar span,
-.main-section .tool__container .music__card .progress-area .timer span,
-.main-section .tool__container .music__card .controls span,
-.main-section .tool__container .music__card .music-list .header span,
-.main-section .tool__container .music__card .music-list li span {
-  font-size: 1rem;
 }
 
 .main-section .tool__container .music__card .img-area {
@@ -381,12 +366,11 @@ body {
 }
 
 .main-section .tool__container .music__card .song-details .name {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .main-section .tool__container .music__card .song-details .artist {
-  opacity: 0.9;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .main-section .tool__container .music__card .progress-area {
@@ -471,12 +455,25 @@ body {
 .main-section .tool__container .music__card .music-list {
   position: absolute;
   left: 0;
-  bottom: 0;
-  padding: 1rem 0.5rem;
+  bottom: -35%;
+  opacity: 0;
+  pointer-events: none;
+  padding: 0.4rem 0.5rem 1.2rem 0.5rem;
   width: 100%;
   background: #ecf0f3;
+  border-radius: 1.5rem 1.5rem 2.5rem 2.5rem;
   -webkit-box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -10px -10px 15px #fff, 10px 10px 15px rgba(70, 70, 70, 0.12);
+          box-shadow: -10px -10px 15px #fff, 10px 10px 15px rgba(70, 70, 70, 0.12);
+  -webkit-transition: all .14s ease-out;
+  transition: all .14s ease-out;
+}
+
+.main-section .tool__container .music__card .music-list .show {
+  bottom: 0;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .main-section .tool__container .music__card .music-list .header .row {
@@ -486,7 +483,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .main-section .tool__container .music__card .music-list .header .row i {
@@ -494,11 +491,40 @@ body {
 }
 
 .main-section .tool__container .music__card .music-list .header .row span {
-  margin-left: 0.3rem;
+  margin-left: 0.5rem;
 }
 
 .main-section .tool__container .music__card .music-list .header #close {
   font-size: 1.3rem;
+}
+
+.main-section .tool__container .music__card .music-list ul {
+  margin: 0.1rem 0.3rem;
+  max-height: 7rem;
+  overflow-y: auto;
+}
+
+.main-section .tool__container .music__card .music-list ul::-webkit-scrollbar {
+  width: 0rem;
+}
+
+.main-section .tool__container .music__card .music-list ul li {
+  cursor: pointer;
+  list-style: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.main-section .tool__container .music__card .music-list ul li:last-child {
+  border-bottom: 0px;
+}
+
+.main-section .tool__container .music__card .music-list ul li .row span,
+.main-section .tool__container .music__card .music-list ul li .row p {
+  font-size: 0.9rem;
+}
+
+.main-section .tool__container .music__card .music-list ul li .audio-duration {
+  font-size: 0.8rem;
 }
 
 .socials {
