@@ -84,6 +84,7 @@
 
             i {
                 cursor: pointer;
+                font-size: 1rem; 
             }
 
             .top-bar, 
@@ -94,14 +95,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-
-                i {
-                   font-size: 1.5rem; 
-                }
-
-                span {
-                    font-size: 1rem; 
-                }
             }
 
             .img-area {
@@ -128,12 +121,11 @@
                 color: $--primary-color;
 
                 .name {
-                    font-size: 1.3rem;
+                    font-size: 1.1rem;
                 }
 
                 .artist {
-                    opacity: 0.9;
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                 }
             }
 
@@ -212,28 +204,70 @@
             .music-list {
                 position: absolute;
                 left: 0;
-                bottom: 0;
-                padding: 1rem 0.5rem;
+                bottom: -35%;
+                opacity: 0;
+                pointer-events: none;
+                padding: 0.4rem 0.5rem 1.2rem 0.5rem;
                 width: 100%;
                 background: #ecf0f3;
+                border-radius: 1.5rem 1.5rem 2.5rem 2.5rem;
                 box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+                box-shadow: -10px -10px 15px #fff, 
+                        10px 10px 15px rgba(70, 70, 70, 0.12);
+                transition: all .14s ease-out;
+
+                // Toggle class for JS
+                .show {
+                    bottom: 0;
+                    opacity: 1;
+                    pointer-events: auto;  
+                }
 
                 .header .row {
                     display: flex;
                     align-items: center;
-                    font-size: 0.8rem;
+                    font-size: 1rem;
 
                     i {
                         cursor: default;
                     }
-                }
 
-                .header .row span {
-                    margin-left: 0.3rem;
+                    span {
+                        margin-left: 0.5rem;
+                    }
                 }
-
+                
                 .header #close {
                     font-size: 1.3rem;
+                }
+
+                ul {
+                    margin: 0.1rem 0.3rem;
+                    max-height: 7rem;
+                    overflow-y: auto;
+
+                    &::-webkit-scrollbar{
+                        width: 0rem;
+                    }
+
+                    li {
+                        cursor: pointer;
+                        list-style: none;
+                        border-bottom: 1px solid #e5e5e5;
+
+                        &:last-child {
+                            border-bottom: 0px;
+                        }
+
+                        .row span,
+                        .row p {
+                            font-size: 0.9rem;
+                        }
+                        
+                        .audio-duration {
+                            font-size: 0.8rem;
+                        }
+                    }
                 }
             }
         }
