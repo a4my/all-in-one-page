@@ -140,3 +140,111 @@ adaWS.onmessage = (e) => {
 //   function refresh() {
 //     window .location.reload();
 // }
+
+
+///////////////////////////////
+// Music Player
+
+let allMusic = [
+    {
+        name: 'Heart On The Run',
+        artist: 'Damn Dice',
+        img: 'music-1',
+        src: 'music-1' 
+    },
+    {
+        name: 'Caught In The Ride',
+        artist: 'Damn Dice',
+        img: 'music-2',
+        src: 'music-2' 
+    },
+    {
+        name: 'Stories I Write',
+        artist: 'Damn Dice',
+        img: 'music-3',
+        src: 'music-3' 
+    },
+    {
+        name: 'What Now?',
+        artist: 'Damn Dice',
+        img: 'music-2',
+        src: 'music-4' 
+    },
+    {
+        name: 'Fire Below',
+        artist: 'Damn Dice',
+        img: 'music-3',
+        src: 'music-5' 
+    },
+    {
+        name: 'Home',
+        artist: 'Damn Dice',
+        img: 'music-2',
+        src: 'music-6' 
+    },
+    {
+        name: 'Behind You',
+        artist: 'Damn Dice',
+        img: 'music-3',
+        src: 'music-7' 
+    },
+    {
+        name: 'Find Me',
+        artist: 'Damn Dice',
+        img: 'music-3',
+        src: 'music-8' 
+    },
+    {
+        name: 'Power',
+        artist: 'Damn Dice',
+        img: 'music-2',
+        src: 'music-9' 
+    },
+    {
+        name: 'Leaving With Nothing',
+        artist: 'Damn Dice',
+        img: 'music-3',
+        src: 'music-10' 
+    },
+]
+
+// Elements
+
+const wrapper = document.querySelector('.music__card')
+musicImg = wrapper.querySelector('.img-area img')
+musicName = wrapper.querySelector('.song-details .name')
+musicArtist = wrapper.querySelector('.song-details .artist')
+mainAudio = wrapper.querySelector('#main-audio')
+playPauseBtn = wrapper.querySelector('.play-pause')
+
+let musicIndex = 2
+
+// Functions
+
+function loadMusic(indexNumb) {
+    musicName.innerText = allMusic[indexNumb - 1].name
+    musicArtist.innerText = allMusic[indexNumb - 1].artist
+    musicImg.src = `img/${allMusic[indexNumb - 1].img}.jpg`
+    mainAudio.src = `audio/${allMusic[indexNumb - 1].src}.mp3`
+}
+
+function playMusic() {
+    wrapper.classList.add('paused')
+    mainAudio.play()
+}
+
+function pauseMusic() {
+    wrapper.classList.remove('paused')
+    mainAudio.pause()
+}
+
+// Events
+
+window.addEventListener('load', () => {
+    loadMusic(musicIndex)
+})
+
+playPauseBtn.addEventListener('click', () => {
+    const isMusicPaused = wrapper.classList.contains('paused')
+    isMusicPaused ? pauseMusic() : playMusic()
+})
