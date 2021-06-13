@@ -390,8 +390,7 @@ body {
   width: 50%;
   position: relative;
   border-radius: inherit;
-  background: -webkit-gradient(linear, left top, right bottom, from(#9be15d), to(#39b385));
-  background: linear-gradient(to bottom right, #9be15d, #39b385);
+  background: #39b385;
 }
 
 .main-section .tool__container .music__card .progress-area .progress-bar::before {
