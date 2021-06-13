@@ -36,13 +36,13 @@ setInterval(function() {
     let month = date.getUTCMonth()
     let year = date.getUTCFullYear()
 
+    if(day === 0) { day = 'Sunday'}
     if(day === 1) { day = 'Monday'}
     if(day === 2) { day = 'Tuesday'}
     if(day === 3) { day = 'Wednesday'}
     if(day === 4) { day = 'Thursday'}
     if(day === 5) { day = 'Friday'}
     if(day === 6) { day = 'Saturday'}
-    if(day === 7) { day = 'Sunday'}
     
     if(month === 0) { month = 'January'}
     if(month === 1) { month = 'February'}
@@ -216,6 +216,10 @@ musicName = wrapper.querySelector('.song-details .name')
 musicArtist = wrapper.querySelector('.song-details .artist')
 mainAudio = wrapper.querySelector('#main-audio')
 playPauseBtn = wrapper.querySelector('.play-pause')
+prevBtn = wrapper.querySelector('#prev')
+nextBtn = wrapper.querySelector('#next')
+progressArea = wrapper.querySelector('.progress-area')
+progressBar = wrapper.querySelector('.progress-bar')
 
 let musicIndex = 2
 
@@ -230,12 +234,30 @@ function loadMusic(indexNumb) {
 
 function playMusic() {
     wrapper.classList.add('paused')
+    playPauseBtn.querySelector('i').classList.remove('fa-play')
+    playPauseBtn.querySelector('i').classList.add('fa-pause')
     mainAudio.play()
 }
 
 function pauseMusic() {
     wrapper.classList.remove('paused')
+    playPauseBtn.querySelector('i').classList.remove('fa-pause')
+    playPauseBtn.querySelector('i').classList.add('fa-play')
     mainAudio.pause()
+}
+
+function nextSong() {
+    musicIndex++
+    musicIndex > allMusic.length ? musicIndex = 1 : musicIndex = musicIndex
+    loadMusic(musicIndex)
+    playMusic()
+}
+
+function prevSong() {
+    musicIndex--
+    musicIndex < 1 ? musicIndex = allMusic.length : musicIndex = musicIndex
+    loadMusic(musicIndex)
+    playMusic()
 }
 
 // Events
@@ -247,4 +269,99 @@ window.addEventListener('load', () => {
 playPauseBtn.addEventListener('click', () => {
     const isMusicPaused = wrapper.classList.contains('paused')
     isMusicPaused ? pauseMusic() : playMusic()
+})
+
+nextBtn.addEventListener('click', () => {
+    nextSong()
+})
+
+prevBtn.addEventListener('click', () => {
+    prevSong()
+})
+
+mainAudio.addEventListener('timeupdate', (e) => {
+    const currentTime = e.target.currentTime
+    const duration = e.target.duration
+    let progressWidth = (currentTime / duration) * 100
+    progressBar.style.width = `${progressWidth}%`
+
+    let musicCurrentTime = wrapper.querySelector('.current')
+    let musicDuration = wrapper.querySelector('.duration')
+
+    mainAudio.addEventListener('loadeddata', () => {
+
+        // Update song total duration
+        let audioDuration = mainAudio.duration
+        let totalMin = Math.floor(audioDuration / 60)
+        let totalSec = Math.floor(audioDuration % 60)
+        if(totalSec < 10) {
+            totalSec = `0${totalSec}`
+        }
+        musicDuration.innerText = `${totalMin}:${totalSec}`
+
+    })
+
+    // Update playing current song time
+
+    let currentMin = Math.floor(currentTime / 60)
+    let currentSec = Math.floor(currentTime % 60)
+    if(currentSec < 10) {
+        currentSec = `0${currentSec}`
+    }
+    musicCurrentTime.innerText = `${currentMin}:${currentSec}`
+})
+
+//click on the progress bar to update song current time
+progressArea.addEventListener('click', (e) => {
+    let progressWidthVal = progressArea.clientWidth
+    let clickedOffSetX = e.offsetX
+    let songDuration = mainAudio.duration
+
+    mainAudio.currentTime = (clickedOffSetX / progressWidthVal) * songDuration
+    playMusic()
+})
+
+
+// repeat and shuffle btns - icon changes
+const repeatBtn = wrapper.querySelector('#repeat-plist')
+let clickedRepeat = 0
+repeatBtn.addEventListener('click', () => {
+    clickedRepeat++
+    if(clickedRepeat === 0) {
+        repeatBtn.classList.remove('fa-exchange-alt')
+        repeatBtn.classList.remove('fa-random')
+        repeatBtn.classList.add('fa-redo')
+    }
+    if(clickedRepeat === 1) {
+        repeatBtn.classList.remove('fa-random')
+        repeatBtn.classList.remove('fa-redo')
+        repeatBtn.classList.add('fa-exchange-alt')
+    }
+    if(clickedRepeat === 2) {
+        repeatBtn.classList.remove('fa-redo')
+        repeatBtn.classList.remove('fa-exchange-alt')   
+        repeatBtn.classList.add('fa-random')
+    }
+    if(clickedRepeat > 2) {
+        clickedRepeat = 0
+        repeatBtn.classList.remove('fa-exchange-alt')
+        repeatBtn.classList.remove('fa-random')
+        repeatBtn.classList.add('fa-redo')
+    }
+})
+
+
+// repeat and shuffle options when a song ends
+
+mainAudio.addEventListener('ended', () => {
+    if(clickedRepeat === 0) {
+        nextSong()
+    }
+    if(clickedRepeat === 1) {
+        mainAudio.currentTime = 0
+        loadMusic(indexNumb)
+    }
+    if(clickedRepeat === 2) {
+        let randomIndex = Math.floor((math.random() * allMusic.length) + 1)
+    }
 })
