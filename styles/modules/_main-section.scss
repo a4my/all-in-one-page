@@ -145,7 +145,7 @@
                     width: 50%;
                     position: relative;
                     border-radius: inherit;
-                    background: $--gradient-primary;
+                    background: $--primary-color;
 
                     &::before {
                         content: '';
@@ -185,6 +185,7 @@
                     // -webkit-text-fill-color: transparent;
                 }
 
+                
                 .play-pause {
                     height: 3.2rem;
                     width: 3.2rem;
