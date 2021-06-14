@@ -353,15 +353,20 @@ repeatBtn.addEventListener('click', () => {
 
 // repeat and shuffle options when a song ends
 
+
 mainAudio.addEventListener('ended', () => {
     if(clickedRepeat === 0) {
         nextSong()
     }
     if(clickedRepeat === 1) {
         mainAudio.currentTime = 0
-        loadMusic(indexNumb)
+        loadMusic(musicIndex)
+        playMusic()
     }
     if(clickedRepeat === 2) {
-        let randomIndex = Math.floor((math.random() * allMusic.length) + 1)
+        let randomIndex = Math.floor((Math.random() * allMusic.length) + 1)
+        musicIndex = randomIndex
+        loadMusic(musicIndex)
+        playMusic()
     }
 })
