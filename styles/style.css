@@ -387,7 +387,7 @@ body {
 
 .main-section .tool__container .music__card .progress-area .progress-bar {
   height: inherit;
-  width: 50%;
+  width: 0%;
   position: relative;
   border-radius: inherit;
   background: #39b385;
