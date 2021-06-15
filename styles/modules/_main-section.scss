@@ -294,8 +294,32 @@
                     margin-left: 4rem;
                 }
 
-                input {
-                    background-color: $--primary--bg;
+                .inputs {
+                    display: flex;
+                    justify-content: space-between;
+
+                    input,
+                    select {
+                        background-color: $--primary--bg;
+                        border: none;
+                        border-radius: 3px;
+                        outline: none;
+                        box-shadow: 5px 5px 5px #babecc, -5px -5px 10px #fff,
+                                 inset 2px 2px 5px #babecc, 
+                                inset -5px -5px 10px #fff;
+                        height: 1.5rem;
+                        margin-top: 0.5rem;
+                        width: 5rem;
+                    }
+
+                    input,
+                    option,
+                    select {
+                        text-align: center;
+                        padding: 5px;
+                        color: #555;
+                        font-weight: 700;
+                    }
                 }
             }
         }

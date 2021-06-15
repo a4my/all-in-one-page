@@ -552,8 +552,35 @@ body {
   margin-left: 4rem;
 }
 
-.main-section .tool__container .converter__card .converters input {
+.main-section .tool__container .converter__card .converters .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-section .tool__container .converter__card .converters .inputs input,
+.main-section .tool__container .converter__card .converters .inputs select {
   background-color: #ecf0f3;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  -webkit-box-shadow: 5px 5px 5px #babecc, -5px -5px 10px #fff, inset 2px 2px 5px #babecc,  inset -5px -5px 10px #fff;
+          box-shadow: 5px 5px 5px #babecc, -5px -5px 10px #fff, inset 2px 2px 5px #babecc,  inset -5px -5px 10px #fff;
+  height: 1.5rem;
+  margin-top: 0.5rem;
+  width: 5rem;
+}
+
+.main-section .tool__container .converter__card .converters .inputs input,
+.main-section .tool__container .converter__card .converters .inputs option,
+.main-section .tool__container .converter__card .converters .inputs select {
+  text-align: center;
+  padding: 5px;
+  color: #555;
+  font-weight: 700;
 }
 
 .socials {
