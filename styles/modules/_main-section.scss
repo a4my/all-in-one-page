@@ -1,6 +1,6 @@
 .main-section {
     width: 100%;
-    height: 39rem;
+    height: 35rem;
     margin-bottom: 0;
     
     .tool__container {
@@ -15,8 +15,8 @@
         .notes__card {
             width: 18rem;
             height: 30rem;
-            box-shadow: -10px -10px 15px rgba(255, 255,255, 0.5), 
-                        10px 10px 15px rgba(70, 70, 70, 0.12);
+            box-shadow: 13px 13px 20px $--shadow--1, 
+                -13px -13px 20px $--shadow--2;
             border-radius: 40px;
             margin: 1.5rem 3rem;
         }
@@ -37,7 +37,8 @@
                 padding: 1.7rem 1rem 1.7rem 0;
                 margin: 1.5rem 0;
                 background: transparent;
-                box-shadow: 5px 5px 5px #babecc, -5px -5px 10px #fff, inset 2px 2px 5px #babecc, 
+                box-shadow: 5px 5px 5px #babecc, -5px -5px 10px #fff,
+                             inset 2px 2px 5px #babecc, 
                             inset -5px -5px 10px #fff;
                 
                 &::placeholder {
@@ -55,9 +56,10 @@
                 font-size: 1.5rem;
                 font-weight: bold;
                 cursor: pointer;
-                background-color: #ecf0f3;
+                background-color: $--primary--bg;
                 border-radius: 8px;
-                box-shadow: 5px 5px 5px #babecc, -5px -5px 10px #fff;
+                box-shadow: 5px 5px 10px $--shadow--1, 
+                            -5px -5px 10px $--shadow--2;
                 display: inline-block;
             }
 
@@ -100,11 +102,11 @@
             .img-area {
                 width: 100%;
                 height: 13rem;
-                background-color: #ecf0f3;
+                background-color: $--primary--bg;
                 border-radius: 30px;
-                border: 2px solid #ecf0f3;
-                box-shadow: -10px -10px 15px #fff, 
-                        10px 10px 15px rgba(70, 70, 70, 0.12);
+                border: 2px solid $--primary--bg;
+                box-shadow: 13px 13px 20px $--shadow--1, 
+                            -13px -13px 20px $--shadow--2;
                 overflow: hidden;
                 margin-top: 1.2rem;
 
@@ -179,10 +181,6 @@
                 i {
                     font-size: 1.4rem;
                     user-select: none;
-                    // background: $--gradient-primary;
-                    // background-clip: text;
-                    // -webkit-background-clip:text;
-                    // -webkit-text-fill-color: transparent;
                 }
 
                 
@@ -216,11 +214,11 @@
                 pointer-events: none;
                 padding: 0.4rem 0.5rem 1.2rem 0.5rem;
                 width: 100%;
-                background: #ecf0f3;
+                background: $--primary--bg;
                 border-radius: 1.5rem 1.5rem 2.5rem 2.5rem;
                 box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
                 box-shadow: -10px -10px 15px #fff, 
-                        10px 10px 15px rgba(70, 70, 70, 0.12);
+                            10px 10px 15px rgba(70, 70, 70, 0.12);
                 transition: all .14s ease-out;
 
                 .header .row {
@@ -273,6 +271,31 @@
                         font-weight: 700;
                         pointer-events: none;
                     }
+                }
+            }
+        }
+
+        .converter__card {
+            padding: 1.6rem 2rem 1.6rem 2rem;
+
+            .converters {
+                margin-bottom: 1rem;
+
+                &__logo {
+                    color: $--primary-color;
+                    font-size: 1.2rem;
+                }
+
+                &__table {
+                    margin-top: 0.5rem;
+                }
+
+                select {
+                    margin-left: 4rem;
+                }
+
+                input {
+                    background-color: $--primary--bg;
                 }
             }
         }
