@@ -268,7 +268,11 @@ function prevSong() {
 
 }
 
+////////////////////////////////////////////////
 // Events
+
+///////////////////////
+// MUSIC PLAYER
 
 window.addEventListener('load', () => {
     loadMusic(musicIndex)
@@ -449,3 +453,4 @@ function clicked(element) {
     playMusic()
     playingNow()
 }
+
