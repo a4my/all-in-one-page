@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+$--gradient-primary: linear-gradient(to bottom right, #9be15d, #39b385);
+
+$--primary-color: #39b385;
+
+$--primary--bg: #ecf0f3;
+
+$--shadow--1: #cbced1;
+$--shadow--2: #fff;
+
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +21,7 @@ box-sizing: border-box;
 }
 
 body {
-    background-color: #ecf0f3;
+    background-color: $--primary--bg;
     color: #555;
     font-family: 'Poppins', sans-serif;
     height: 100vh;

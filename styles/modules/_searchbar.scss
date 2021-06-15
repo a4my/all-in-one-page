@@ -5,8 +5,8 @@
     width: 50%;
     height: 4.1rem;
     margin: 0 auto;
-    box-shadow: -10px -10px 15px rgba(255, 255,255, 0.5), 
-                10px 10px 15px rgba(70, 70, 70, 0.12);
+    box-shadow: 13px 13px 20px $--shadow--1, 
+                -13px -13px 20px $--shadow--2;
                 // inset 8px 8px 8px #cbced1, 
                 // inset -8px -8px 8px #fff;
     border-radius: 40px;
@@ -29,10 +29,10 @@
     }
 
     input:focus {
-        box-shadow: -10px -10px 15px rgba(255, 255,255, 0.5), 
-                10px 10px 15px rgba(70, 70, 70, 0.12),
-                inset 8px 8px 8px #cbced1, 
-                inset -8px -8px 8px #fff;
+        box-shadow: 13px 13px 20px $--shadow--1, 
+                    -13px -13px 20px $--shadow--2,
+                    inset 8px 8px 8px $--shadow--1, 
+                    inset -8px -8px 8px $--shadow--2;
         border-radius: 30px;
     }
 
