@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/styles/style.css">
     <title>All In One</title>
 </head>
-<body>
+<body">
     <header class="header">
         <div class="logo">
             <p class="logo__text">All in <br>one</p>
@@ -140,7 +140,7 @@
                     <p class="converters__logo"><i class="fas fa-coins"></i></p>
                     <div class="inputs">
                         <input id="from-amount" type="text" size="7" value="1">
-                        <select name="to-btn" id="to">
+                        <select class="currency" id="from-currency">
                             <option value="EUR">EUR</option>
                             <option value="GBP" selected>GBP</option>
                             <option value="USD">USD</option>
@@ -148,7 +148,7 @@
                     </div>
                     <div class="inputs">
                         <input id="to-amount" type="text" size="7">
-                        <select name="to-btn" id="to">
+                        <select class="currency" id="to-currency">
                             <option value="EUR" selected>EUR</option>
                             <option value="GBP" >GBP</option>
                             <option value="USD">USD</option>
@@ -236,5 +236,6 @@
     </section>  
     
     <script src="/scripts/script.js"></script>
+    <script src="/scripts/modules/converter.js"></script>
 </body>
 </html>
