@@ -1,31 +1,9 @@
 /////////////////////////
-/////////CONVERTER CARD
+/////////CURRENCY CONVERTER
 
-// const fromCurrency = document.querySelector('#from-currency').value
-// const toCurrency = document.querySelector('#to-currency').value
-// const amount = document.querySelector('#from-amount').value
-// const xmlHttp = new XMLHttpRequest()
-
-// function convertCurrency() {
-//     const url = 'http://data.fixer.io/api/latest?&access_key=fd91fb68d509d33566a6b2036be72c72&symbols=' + fromCurrency + ',' + toCurrency
-//     xmlHttp.open('GET', url, true)
-//     xmlHttp.send()
-//     xmlHttp.onreadystatechange = function() {
-//         if (xmlHttp.readyState == 4 && xmlHttp.status== 200 ) {
-//             const result = xmlHttp.responseText
-//             // alert(result)
-//             const jsResult = JSON.parse(result)
-//             const oneUnit = jsResult.rates[fromCurrency]/jsResult.rates[toCurrency]
-//             document.querySelector('#to-amount').value = (oneUnit * amount).toFixed(2)
-//         }
-//     }
-
-// }
-
-const select = document.querySelectorAll('.currency')
-// const btn = document.querySelector('#btn')
-const num = document.querySelector('#from-amount')
-const ans = document.querySelector('#to-amount')
+const selectedCurrency = document.querySelectorAll('.currency')
+const fromAmount = document.querySelector('#from-amount')
+const toAmount = document.querySelector('#to-amount')
 
 fetch('https://api.frankfurter.app/currencies')
 .then((data) => data.json())
@@ -36,30 +14,34 @@ fetch('https://api.frankfurter.app/currencies')
 function display(data) {
     const entries = Object.entries(data)
     for (let i = 0; i < entries.length; i++) {
-        select[0].innerHTML += `<option value="${entries[i][0]}">${entries[i][0]}</option>`
-        select[1].innerHTML += `<option value="${entries[i][0]}">${entries[i][0]}</option>`
+        selectedCurrency[0].innerHTML += `<option value="${entries[i][0]}">${entries[i][0]}</option>`
+        selectedCurrency[1].innerHTML += `<option value="${entries[i][0]}">${entries[i][0]}</option>`
         
     }
 }
 
-num.addEventListener('keyup', () => {
-    let currency1 = select[0].value
-    let currency2 = select[1].value
-    let value = num.value
+fromAmount.addEventListener('keyup', () => {
+    let currency1 = selectedCurrency[0].value
+    let currency2 = selectedCurrency[1].value
+    let amountToConvert = fromAmount.value
     
     if(currency1 != currency2) {
-        convert(currency1, currency2, value)
+        convert(currency1, currency2, amountToConvert)
     } else {
         alert("Please choose 2 different currencies!")
     }
 })
 
-function convert(currency1, currency2, value) {
+function convert(currency1, currency2, amountToConvert) {
     const host = 'api.frankfurter.app'
-    fetch(`https://${host}/latest?amount=${value}&from=${currency1}&to=${currency2}`)
+    fetch(`https://${host}/latest?amount=${amountToConvert}&from=${currency1}&to=${currency2}`)
     .then((val) => val.json())
     .then((val) => {
         console.log(Object.values(val.rates)[0])
-        ans.value = Object.values(val.rates)[0]
+        toAmount.value = Object.values(val.rates)[0]
     })
 }
+
+/////////////////////////
+/////////WEIGHT CONVERTER
+
