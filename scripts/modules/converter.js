@@ -82,3 +82,42 @@ selectedToMass.addEventListener('change', () => {
         selectedToMass.value = 'kg'
     }
 })
+
+/////////////////////////
+/////////height / length CONVERTER
+
+const fromHeight = document.querySelector('#from-height')
+const toHeight = document.querySelector('#to-height')
+const selectedFromLength = document.querySelector('#from-length')
+const selectedToLength = document.querySelector('#to-length') 
+
+function convertHeight() {
+    if(selectedFromLength.value == 'meter') {
+        toHeight.value = (fromHeight.value * 3.281).toFixed(2);
+    } else {
+        toHeight.value = (fromHeight.value / 3.281).toFixed(2);
+    }
+}
+
+// Events
+
+
+fromHeight.addEventListener('keyup', () => {
+    convertHeight()
+})
+
+selectedFromLength.addEventListener('change', () => {
+    if(selectedFromLength.value == 'meter') {
+        selectedToLength.value = 'feet'
+    } else if(selectedFromLength.value == 'feet')  {
+        selectedToLength.value = 'meter'
+    } 
+})
+
+selectedToLength.addEventListener('change', () => {
+    if(selectedToLength.value == 'meter') {
+        selectedFromLength.value = 'feet'
+    } else if (selectedFromLength.value == 'feet')  {
+        selectedToLength.value = 'meter'
+    }
+})
