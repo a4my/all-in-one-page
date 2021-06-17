@@ -154,7 +154,7 @@ body {
   -webkit-box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
           box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
   border-radius: 40px;
-  margin: 1rem 10rem;
+  margin: 1rem 10rem 2rem 10rem;
 }
 
 .info .weather,
@@ -235,7 +235,7 @@ body {
 .main-section .tool__container .calculator__card,
 .main-section .tool__container .music__card,
 .main-section .tool__container .converter__card,
-.main-section .tool__container .notes__card {
+.main-section .tool__container .todo-list__card {
   width: 18rem;
   height: 30rem;
   -webkit-box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
@@ -583,6 +583,66 @@ body {
   font-weight: 700;
 }
 
+.main-section .tool__container .todo-list__card .task__container {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-section .tool__container .todo-list__card .task__container input {
+  background-color: #ecf0f3;
+  border: none;
+  outline: none;
+  color: #555;
+  padding-left: 1.5rem;
+  width: 12rem;
+  height: 3rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+          box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+  border-radius: 30px;
+}
+
+.main-section .tool__container .todo-list__card .task__container button {
+  border: none;
+  outline: none;
+  color: #39b385;
+  font-size: 1.2rem;
+  cursor: pointer;
+  height: 2.2rem;
+  width: 2.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  -webkit-box-shadow: -10px -10px 15px #fff, 10px 10px 15px rgba(70, 70, 70, 0.12);
+          box-shadow: -10px -10px 15px #fff, 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.main-section .tool__container .todo-list__card .task__container .btns {
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .socials {
   position: absolute;
   top: 50%;
@@ -638,6 +698,11 @@ body {
   padding: 0.5rem 1rem 1rem 1rem;
 }
 
+.tools .google {
+  font-size: 1.8rem;
+  margin-bottom: .2rem;
+}
+
 .tools a {
   color: #39b385;
   font-size: 2rem;
@@ -687,6 +752,8 @@ body {
   color: #555;
   padding: 20px 10px 20px 15px;
   margin: 0 3rem;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .searchbar input:focus {
