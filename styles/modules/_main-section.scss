@@ -16,7 +16,7 @@
             width: 18rem;
             height: 30rem;
             box-shadow: 13px 13px 20px $--shadow--1, 
-                -13px -13px 20px $--shadow--2;
+                        -13px -13px 20px $--shadow--2;
             border-radius: 40px;
             margin: 1.5rem 3rem;
         }
@@ -326,7 +326,7 @@
 
         .todo-list__card {
 
-            .task__container {
+            .add-task__container {
                 padding: 1.5rem 1.5rem 1rem 1.5rem;
                 display: flex;
                 align-items: center;
@@ -337,6 +337,7 @@
                     border: none;
                     outline: none;
                     color: #555;
+                    font-size: 1rem;
                     padding-left: 1.5rem;
                     width: 12rem;
                     height: 3rem;
@@ -361,12 +362,31 @@
                     box-shadow: -10px -10px 15px #fff, 
                         10px 10px 15px rgba(70, 70, 70, 0.12);
                 }
+            }
+            
+            .task__container {
+                padding: 1rem;
+                margin: 1rem 0.7rem;
+                border-radius: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-shadow: 13px 13px 20px $--shadow--1, 
+                        -13px -13px 20px $--shadow--2;
 
                 .btns {
                     width: 3rem;
                     display:flex;
                     justify-content: space-between;
-                }
+
+                    button {
+                        border: none;
+                        outline: none;
+                        color: $--primary-color;
+                        font-size: 1.2rem;
+                        cursor: pointer;
+                    }
+                }  
             }
         }
     }

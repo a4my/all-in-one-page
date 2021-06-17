@@ -583,7 +583,7 @@ body {
   font-weight: 700;
 }
 
-.main-section .tool__container .todo-list__card .task__container {
+.main-section .tool__container .todo-list__card .add-task__container {
   padding: 1.5rem 1.5rem 1rem 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -596,11 +596,12 @@ body {
           justify-content: space-between;
 }
 
-.main-section .tool__container .todo-list__card .task__container input {
+.main-section .tool__container .todo-list__card .add-task__container input {
   background-color: #ecf0f3;
   border: none;
   outline: none;
   color: #555;
+  font-size: 1rem;
   padding-left: 1.5rem;
   width: 12rem;
   height: 3rem;
@@ -611,7 +612,7 @@ body {
   border-radius: 30px;
 }
 
-.main-section .tool__container .todo-list__card .task__container button {
+.main-section .tool__container .todo-list__card .add-task__container button {
   border: none;
   outline: none;
   color: #39b385;
@@ -633,6 +634,23 @@ body {
           box-shadow: -10px -10px 15px #fff, 10px 10px 15px rgba(70, 70, 70, 0.12);
 }
 
+.main-section .tool__container .todo-list__card .task__container {
+  padding: 1rem;
+  margin: 1rem 0.7rem;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+          box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+
 .main-section .tool__container .todo-list__card .task__container .btns {
   width: 3rem;
   display: -webkit-box;
@@ -641,6 +659,14 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.main-section .tool__container .todo-list__card .task__container .btns button {
+  border: none;
+  outline: none;
+  color: #39b385;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .socials {
