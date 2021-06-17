@@ -209,31 +209,13 @@
             </div>
             <div class="todo-list__card">
                 <div class="add-task__container">
-                    <input type="text" size="15" placeholder="Add a task">
-                        <button>
+                    <input id="addTask" type="text" size="15" placeholder="Add a task">
+                        <button id="addBtn">
                             <i class="fas fa-plus">
                         </i></button>
                 </div>
-                <div class="task__container">
-                    <p>Task one here</p>
-                    <div class="btns">
-                        <button><i class="fas fa-check"></i></button>
-                        <button><i class="fas fa-trash"></i></button>
-                    </div>
-                </div>
-                <div class="task__container">
-                    <p>Task two here</p>
-                    <div class="btns">
-                        <button><i class="fas fa-check"></i></button>
-                        <button><i class="fas fa-trash"></i></button>
-                    </div>
-                </div>
-                <div class="task__container">
-                    <p>Task three here</p>
-                    <div class="btns">
-                        <button><i class="fas fa-check"></i></button>
-                        <button><i class="fas fa-trash"></i></button>
-                    </div>
+                <div class="task__list">
+                    
                 </div>
             </div>
         </div>
@@ -266,5 +248,6 @@
     <script src="/scripts/script.js"></script>
     <script src="/scripts/modules/music-player.js"></script>
     <script src="/scripts/modules/converter.js"></script>
+    <script src="/scripts/modules/todo-list.js"></script>
 </body>
 </html>
