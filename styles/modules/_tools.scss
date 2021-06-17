@@ -16,6 +16,7 @@
         color: $--primary-color;
         font-size: 2rem;
     }
+
 }
 
 .tools {
@@ -28,15 +29,20 @@
     justify-content: center;
     flex-direction: column;
     box-shadow: 13px 13px 20px $--shadow--1, 
-                -13px -13px 20px $--shadow--2;
+    -13px -13px 20px $--shadow--2;
     border-radius: 20px 0 0 20px;
     padding: 0.5rem 1rem 1rem 1rem;
+    
+    .google {
+        font-size: 1.8rem;
+        margin-bottom: .2rem;
+    }
     
     a {
         color: $--primary-color;
         font-size: 2rem;
     }
-
+    
     img {
         height: 2.8rem;
         width: 2.8rem;
