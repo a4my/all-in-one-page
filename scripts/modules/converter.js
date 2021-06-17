@@ -78,8 +78,8 @@ selectedFromMass.addEventListener('change', () => {
 selectedToMass.addEventListener('change', () => {
     if(selectedToMass.value == 'kg') {
         selectedFromMass.value = 'lbs'
-    } else if (selectedFromMass.value == 'lbs')  {
-        selectedToMass.value = 'kg'
+    } else if (selectedToMass.value == 'lbs')  {
+        selectedFromMass.value = 'kg'
     }
 })
 
@@ -117,7 +117,47 @@ selectedFromLength.addEventListener('change', () => {
 selectedToLength.addEventListener('change', () => {
     if(selectedToLength.value == 'meter') {
         selectedFromLength.value = 'feet'
-    } else if (selectedFromLength.value == 'feet')  {
-        selectedToLength.value = 'meter'
+    } else if (selectedToLength.value == 'feet')  {
+        selectedFromLength.value = 'meter'
+    }
+})
+
+
+/////////////////////////
+///////// Km / Feet CONVERTER
+
+const fromDistance = document.querySelector('#from-distance')
+const toDistance = document.querySelector('#to-distance')
+const selectedFromDistance = document.querySelector('#fromDistance')
+const selectedToDistance = document.querySelector('#toDistance') 
+
+function convertDistance() {
+    if(selectedFromDistance.value == 'km') {
+        toDistance.value = (fromDistance.value / 1.609).toFixed(2);
+    } else {
+        toDistance.value = (fromDistance.value * 1.609).toFixed(2);
+    }
+}
+
+// Events
+
+
+fromDistance.addEventListener('keyup', () => {
+    convertDistance()
+})
+
+selectedFromDistance.addEventListener('change', () => {
+    if(selectedFromDistance.value == 'km') {
+        selectedToDistance.value = 'miles'
+    } else if(selectedFromDistance.value == 'miles')  {
+        selectedToDistance.value = 'km'
+    } 
+})
+
+selectedToDistance.addEventListener('change', () => {
+    if(selectedToDistance.value == 'km') {
+        selectedFromDistance.value = 'miles'
+    } else if (selectedToDistance.value == 'miles')  {
+        selectedFromDistance.value = 'km'
     }
 })
