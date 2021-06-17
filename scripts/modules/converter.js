@@ -13,6 +13,7 @@ fetch('https://api.frankfurter.app/currencies')
 
 function display(data) {
     const entries = Object.entries(data)
+    // console.log(Object.entries(data))
     for (let i = 0; i < entries.length; i++) {
         selectedCurrency[0].innerHTML += `<option value="${entries[i][0]}">${entries[i][0]}</option>`
         selectedCurrency[1].innerHTML += `<option value="${entries[i][0]}">${entries[i][0]}</option>`
@@ -27,7 +28,7 @@ fromAmount.addEventListener('keyup', () => {
     
     if(currency1 != currency2) {
         convert(currency1, currency2, amountToConvert)
-    } else {
+    }else {
         alert("Please choose 2 different currencies!")
     }
 })
@@ -37,11 +38,47 @@ function convert(currency1, currency2, amountToConvert) {
     fetch(`https://${host}/latest?amount=${amountToConvert}&from=${currency1}&to=${currency2}`)
     .then((val) => val.json())
     .then((val) => {
-        console.log(Object.values(val.rates)[0])
-        toAmount.value = Object.values(val.rates)[0]
+        // console.log(Object.values(val.rates)[0])
+        toAmount.value = (Object.values(val.rates)[0]).toFixed(2)
     })
 }
+
 
 /////////////////////////
 /////////WEIGHT CONVERTER
 
+const fromWeight = document.querySelector('#from-weight')
+const toWeight = document.querySelector('#to-weight')
+const selectedFromMass = document.querySelector('#fromMasses')
+const selectedToMass = document.querySelector('#toMasses') 
+
+function convertMass() {
+    if(selectedFromMass.value == 'kg') {
+        toWeight.value = (fromWeight.value * 2.205).toFixed(2);
+    } else {
+        toWeight.value = (fromWeight.value / 2.205).toFixed(2);
+    }
+}
+
+// Events
+
+
+fromWeight.addEventListener('keyup', () => {
+    convertMass()
+})
+
+selectedFromMass.addEventListener('change', () => {
+    if(selectedFromMass.value == 'kg') {
+        selectedToMass.value = 'lbs'
+    } else if(selectedFromMass.value == 'lbs')  {
+        selectedToMass.value = 'kg'
+    } 
+})
+
+selectedToMass.addEventListener('change', () => {
+    if(selectedToMass.value == 'kg') {
+        selectedFromMass.value = 'lbs'
+    } else if (selectedFromMass.value == 'lbs')  {
+        selectedToMass.value = 'kg'
+    }
+})
