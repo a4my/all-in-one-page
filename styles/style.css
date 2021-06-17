@@ -647,8 +647,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
-          box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+  -webkit-box-shadow: 5px 5px 20px #cbced1, -8px -8px 20px #fff;
+          box-shadow: 5px 5px 20px #cbced1, -8px -8px 20px #fff;
 }
 
 .main-section .tool__container .todo-list__card .task__container .btns {

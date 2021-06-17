@@ -371,8 +371,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                box-shadow: 13px 13px 20px $--shadow--1, 
-                        -13px -13px 20px $--shadow--2;
+                box-shadow: 5px 5px 20px $--shadow--1, 
+                            -8px -8px 20px $--shadow--2;
 
                 .btns {
                     width: 3rem;
@@ -388,6 +388,16 @@
                     }
                 }  
             }
+
+            // .task__list {
+            //     // padding-top: 2rem;
+            //     max-height: 22rem;
+            //     overflow-y: auto;
+
+            //     &::-webkit-scrollbar{
+            //         width: 0rem;
+            //     }
+            // }
         }
     }
 }
