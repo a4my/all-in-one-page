@@ -26,7 +26,10 @@ function addTask() {
         taskInput.innerText = newTask.value
     
         taskContainer.appendChild(taskInput)
-    
+
+        // Add to local storage 
+        saveLocalTasks(newTask.value)
+
         const btnsContainer = document.createElement('div')
         btnsContainer.classList.add('btns')
     
@@ -38,7 +41,7 @@ function addTask() {
         const deleteBtn = document.createElement('button')
         deleteBtn.innerHTML = '<i class="fas fa-trash"></i>'
         deleteBtn.classList.add('deleteBtn')
-        // deleteBtn.setAttribute('onclick', 'deleteTask()')
+
         btnsContainer.appendChild(deleteBtn)
     
         taskContainer.appendChild(btnsContainer)
@@ -54,6 +57,7 @@ function clickBtns(e) {
     if(item.classList[0] === 'deleteBtn') {
         const taskToRemove = item.parentElement.parentElement
         taskToRemove.remove()
+        removeLocalTasks(taskToRemove)
         taskNumber--
         newTask.value = ''
     }
@@ -63,10 +67,70 @@ function clickBtns(e) {
         taskToRemove.classList.toggle('completed')
         
     }
-
     // console.log(taskNumber)
-
 }
+
+function saveLocalTasks(task) {
+    let tasks;
+    if(localStorage.getItem('tasks') === null) {
+        tasks = []
+    } else {
+        tasks = JSON.parse(localStorage.getItem('tasks'))
+    }
+    tasks.push(task)
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+}
+
+function getLocalTasks() {
+    let tasks;
+    if(localStorage.getItem('tasks') === null) {
+        tasks = []
+    } else {
+        tasks = JSON.parse(localStorage.getItem('tasks'))
+    }
+
+    tasks.forEach(function(task) {
+
+        const taskContainer = document.createElement('div')
+        taskContainer.classList.add('task__container')
+        taskContainer.classList.add('active-task')
+    
+        const taskInput = document.createElement('p')
+        taskInput.innerText = task
+    
+        taskContainer.appendChild(taskInput)
+    
+        const btnsContainer = document.createElement('div')
+        btnsContainer.classList.add('btns')
+    
+        const checkBtn = document.createElement('button')
+        checkBtn.innerHTML = '<i class="fas fa-check"></i>'
+        checkBtn.classList.add('checkBtn')
+        btnsContainer.appendChild(checkBtn)
+    
+        const deleteBtn = document.createElement('button')
+        deleteBtn.innerHTML = '<i class="fas fa-trash"></i>'
+        deleteBtn.classList.add('deleteBtn')
+
+        btnsContainer.appendChild(deleteBtn)
+    
+        taskContainer.appendChild(btnsContainer)
+        taskList.appendChild(taskContainer)
+    })
+}   
+
+function removeLocalTasks(task) {
+    let tasks;
+    if(localStorage.getItem('tasks') === null) {
+        tasks = []
+    } else {
+        tasks = JSON.parse(localStorage.getItem('tasks'))
+    }
+    const taskIndex = task.children[0].innerText
+    tasks.splice(tasks.indexOf(taskIndex), 1)
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+}
+
 
 //Events
 
@@ -86,3 +150,5 @@ addBtn.addEventListener('click', () => {
 })
 
 taskList.addEventListener('click', clickBtns)
+
+document.addEventListener('DOMContentLoaded', getLocalTasks)
