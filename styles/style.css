@@ -634,7 +634,7 @@ body {
           box-shadow: -10px -10px 15px #fff, 10px 10px 15px rgba(70, 70, 70, 0.12);
 }
 
-.main-section .tool__container .todo-list__card .task__container {
+.main-section .tool__container .todo-list__card .task__list .task__container {
   padding: 1rem;
   margin: 1rem 0.7rem;
   border-radius: 40px;
@@ -651,7 +651,7 @@ body {
           box-shadow: 5px 5px 20px #cbced1, -8px -8px 20px #fff;
 }
 
-.main-section .tool__container .todo-list__card .task__container .btns {
+.main-section .tool__container .todo-list__card .task__list .task__container .btns {
   width: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -661,7 +661,7 @@ body {
           justify-content: space-between;
 }
 
-.main-section .tool__container .todo-list__card .task__container .btns button {
+.main-section .tool__container .todo-list__card .task__list .task__container .btns button {
   border: none;
   outline: none;
   color: #39b385;
@@ -669,9 +669,14 @@ body {
   cursor: pointer;
 }
 
-.main-section .tool__container .todo-list__card .fa-trash,
-.main-section .tool__container .todo-list__card .fa-check {
+.main-section .tool__container .todo-list__card .task__list .fa-trash,
+.main-section .tool__container .todo-list__card .task__list .fa-check {
   pointer-events: none;
+}
+
+.main-section .tool__container .todo-list__card .task__list .completed {
+  text-decoration: line-through;
+  font-style: italic;
 }
 
 .socials {

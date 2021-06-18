@@ -364,34 +364,43 @@
                 }
             }
             
-            .task__container {
-                padding: 1rem;
-                margin: 1rem 0.7rem;
-                border-radius: 40px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                box-shadow: 5px 5px 20px $--shadow--1, 
-                            -8px -8px 20px $--shadow--2;
-
-                .btns {
-                    width: 3rem;
-                    display:flex;
+            .task__list {
+                
+                .task__container {
+                    padding: 1rem;
+                    margin: 1rem 0.7rem;
+                    border-radius: 40px;
+                    display: flex;
+                    align-items: center;
                     justify-content: space-between;
+                    box-shadow: 5px 5px 20px $--shadow--1, 
+                    -8px -8px 20px $--shadow--2;
+                    
+    
+                    .btns {
+                        width: 3rem;
+                        display:flex;
+                        justify-content: space-between;
+    
+                        button {
+                            border: none;
+                            outline: none;
+                            color: $--primary-color;
+                            font-size: 1.2rem;
+                            cursor: pointer;
+                        }
+                    }  
+                }
 
-                    button {
-                        border: none;
-                        outline: none;
-                        color: $--primary-color;
-                        font-size: 1.2rem;
-                        cursor: pointer;
-                    }
-                }  
-            }
-
-            .fa-trash,
-            .fa-check {
-                pointer-events: none;
+                .fa-trash,
+                .fa-check {
+                    pointer-events: none;
+                }
+    
+                .completed {
+                    text-decoration: line-through;
+                    font-style: italic;
+                }
             }
         }
     }
