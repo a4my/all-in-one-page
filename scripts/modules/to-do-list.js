@@ -20,6 +20,7 @@ function addTask() {
 
         const taskContainer = document.createElement('div')
         taskContainer.classList.add('task__container')
+        taskContainer.classList.add('active-task')
     
         const taskInput = document.createElement('p')
         taskInput.innerText = newTask.value
@@ -46,7 +47,7 @@ function addTask() {
         newTask.value = ''
 }
 
-function deleteTask(e) {
+function clickBtns(e) {
     // console.log(e.target)
     const item = e.target
 
@@ -56,6 +57,13 @@ function deleteTask(e) {
         taskNumber--
         newTask.value = ''
     }
+
+    if(item.classList[0] === 'checkBtn') {
+        const taskToRemove = item.parentElement.parentElement
+        taskToRemove.classList.toggle('completed')
+        
+    }
+
     // console.log(taskNumber)
 
 }
@@ -77,4 +85,4 @@ addBtn.addEventListener('click', () => {
    }
 })
 
-taskList.addEventListener('click', deleteTask)
+taskList.addEventListener('click', clickBtns)
