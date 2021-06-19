@@ -13,7 +13,7 @@ if(taskNumber < 0) {
 } else if(taskNumber > 5) {
     taskNumber = 5
 }
-console.log(taskNumber)
+// console.log(taskNumber)
 
 // Functions
 function addTask() {
@@ -66,7 +66,7 @@ function clickBtns(e) {
         taskToRemove.classList.toggle('completed')
         
     }
-    console.log(taskNumber)
+    // console.log(taskNumber)
 }
 
 function saveLocalTasks(task) {
@@ -120,7 +120,7 @@ function getLocalTasks() {
         taskNumber++
     })
 
-    console.log(taskNumber)
+    // console.log(taskNumber)
 
 }   
 
@@ -150,7 +150,7 @@ addBtn.addEventListener('click', () => {
                newTask.value = ''
            }, 1500)
        }
-       console.log(taskNumber)
+    //    console.log(taskNumber)
    }
 })
 
