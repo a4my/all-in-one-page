@@ -1,6 +1,7 @@
 .header {
     padding: 0.5rem 2rem 1rem 2rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
     .logo {
@@ -58,35 +59,43 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-        input {
-            height: 4rem;
-            width: 4rem;
-            -webkit-appearance: none;
-            box-shadow: 13px 13px 20px var(--shadow--1), 
+        height: 4.5rem;
+        width: 4.5rem;
+        box-shadow: 13px 13px 20px var(--shadow--1), 
                         -13px -13px 20px var(--shadow--2);
-            border-radius: 50%;
-            border: 8px solid var(--primary--bg);
-            outline: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-    
-        input::after {
-            font-family: 'Font Awesome 5 free';
-            content: '\f186';
-            color: var(--primary-color);
-            font-size: 1.7rem;        
-        }
+        border-radius: 50%;
+        color: var(--primary-color);
+        cursor: pointer;
+        font-size: 2rem;
 
-        input:checked {
-            box-shadow: 13px 13px 20px var(--shadow--1), 
-                        -13px -13px 20px var(--shadow--2),
-                        inset -13px -13px 20px var(--shadow--2), 
-                        inset 13px 13px 20px var(--shadow--1);
-        }
+        // input {
+        //     height: 4rem;
+        //     width: 4rem;
+        //     -webkit-appearance: none;
+        //     box-shadow: 13px 13px 20px var(--shadow--1), 
+        //                 -13px -13px 20px var(--shadow--2);
+        //     border-radius: 50%;
+        //     border: 8px solid var(--primary--bg);
+        //     outline: none;
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     cursor: pointer;
+        // }
+    
+        // input::after {
+        //     font-family: 'Font Awesome 5 free';
+        //     content: '\f186';
+        //     color: var(--primary-color);
+        //     font-size: 1.7rem;        
+        // }
+
+        // input:checked {
+        //     box-shadow: 13px 13px 20px var(--shadow--1), 
+        //                 -13px -13px 20px var(--shadow--2),
+        //                 inset -13px -13px 20px var(--shadow--2), 
+        //                 inset 13px 13px 20px var(--shadow--1);
+        // }
     }
 
 }
