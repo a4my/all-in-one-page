@@ -1,3 +1,14 @@
+///////////////////////////////
+// Refresh page 
+
+window.setInterval('refresh()', 7200000); 
+
+  // Refresh or reload page after an hour
+  function refresh() {
+    window.location.reload();
+}
+
+
 ///////////////////////
 // Time
 
@@ -131,13 +142,5 @@ adaWS.onmessage = (e) => {
     // ethPercent.innerHTML = parseFloat(stockObject.q).toFixed(2)
 } 
 
-///////////////////////////////
-// Refresh page 
 
-// window.setInterval('refresh()', 3600000); 
-
-//   // Refresh or reload page after an hour
-//   function refresh() {
-//     window .location.reload();
-// }
 
