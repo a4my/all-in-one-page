@@ -340,6 +340,10 @@ body {
           justify-content: space-between;
 }
 
+.main-section .tool__container .music__card .top-bar {
+  pointer-events: none;
+}
+
 .main-section .tool__container .music__card .img-area {
   width: 100%;
   height: 13rem;
