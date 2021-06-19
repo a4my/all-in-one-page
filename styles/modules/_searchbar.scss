@@ -26,7 +26,7 @@
         color: #555;
         padding: 20px 10px 20px 15px;
         margin: 0 3rem;
-        transition: all .2s ease-in-out;
+        transition: all .5s ease-in-out;
     }
 
     input:focus {
@@ -43,7 +43,7 @@
         color: $--primary-color;
     }
     
-    button {
+    a {
         cursor: pointer;
         border: none;
         outline: none;
