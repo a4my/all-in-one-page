@@ -3,9 +3,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: $--primary-color;
-    box-shadow: 13px 13px 20px $--shadow--1, 
-                -13px -13px 20px $--shadow--2;
+    color: var(--primary-color);
+    box-shadow: 13px 13px 20px var(--shadow--1), 
+                -13px -13px 20px var(--shadow--2);
     border-radius: 40px;
     margin: 1rem 10rem 2rem 10rem;
 
@@ -19,7 +19,7 @@
 
     .doge img,
     .ada img {
-        color: $--primary-color;
+        color: var(--primary-color);
         height: 2rem;
         width: 2rem;
     }

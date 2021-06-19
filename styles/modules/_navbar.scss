@@ -4,8 +4,8 @@
     justify-content: space-between;
 
     .logo {
-        box-shadow: 13px 13px 20px $--shadow--1, 
-                    -13px -13px 20px $--shadow--2;
+        box-shadow: 13px 13px 20px var(--shadow--1), 
+                    -13px -13px 20px var(--shadow--2);
         border-radius: 30px;
         width: 8rem;
         height: 7rem;
@@ -14,7 +14,7 @@
         &__text {
             text-align: center;
             text-transform: uppercase;
-            color: $--primary-color;
+            color: var(--primary-color);
             font-size: 1.5rem;
             font-weight: 700;
         }
@@ -26,12 +26,12 @@
         justify-content: center;
         
         &__container {
-            box-shadow: 13px 13px 20px $--shadow--1, 
-                        -13px -13px 20px $--shadow--2;
+            box-shadow: 13px 13px 20px var(--shadow--1), 
+                        -13px -13px 20px var(--shadow--2);
             border-radius: 30px;
             padding: 1rem;
             font-size: 2rem;
-            color:  $--primary-color;
+            color:  var(--primary-color);
             letter-spacing: 2px;
             width: 16rem;
             text-align: center;
@@ -44,12 +44,12 @@
         justify-content: center;
         
         &__container {
-            box-shadow: 13px 13px 20px $--shadow--1, 
-                        -13px -13px 20px $--shadow--2;
+            box-shadow: 13px 13px 20px var(--shadow--1), 
+                        -13px -13px 20px var(--shadow--2);
             border-radius: 30px;
             padding: 1rem;
             font-size: 2rem;
-            color:  $--primary-color;
+            color:  var(--primary-color);
             letter-spacing: 2px;
         }
     }
@@ -63,10 +63,10 @@
             height: 4rem;
             width: 4rem;
             -webkit-appearance: none;
-            box-shadow: 13px 13px 20px $--shadow--1, 
-                        -13px -13px 20px $--shadow--2;
+            box-shadow: 13px 13px 20px var(--shadow--1), 
+                        -13px -13px 20px var(--shadow--2);
             border-radius: 50%;
-            border: 8px solid $--primary--bg;
+            border: 8px solid var(--primary--bg);
             outline: none;
             display: flex;
             align-items: center;
@@ -77,15 +77,15 @@
         input::after {
             font-family: 'Font Awesome 5 free';
             content: '\f186';
-            color: $--primary-color;
+            color: var(--primary-color);
             font-size: 1.7rem;        
         }
 
         input:checked {
-            box-shadow: 13px 13px 20px $--shadow--1, 
-                        -13px -13px 20px $--shadow--2,
-                        inset -13px -13px 20px $--shadow--2, 
-                        inset 13px 13px 20px $--shadow--1;
+            box-shadow: 13px 13px 20px var(--shadow--1), 
+                        -13px -13px 20px var(--shadow--2),
+                        inset -13px -13px 20px var(--shadow--2), 
+                        inset 13px 13px 20px var(--shadow--1);
         }
     }
 
