@@ -4,6 +4,7 @@
   --primary--bg: #ecf0f3;
   --shadow--1: #cbced1;
   --shadow--2: #fff;
+  --timer-color: #cbced1;
   --input-color: #555;
 }
 
@@ -12,6 +13,7 @@
   --primary--bg: #0a3d62;
   --shadow--1: #072d47;
   --shadow--2: #11619b;
+  --timer-color: #11619b;
   --input-color: #39b385;
 }
 
@@ -435,7 +437,7 @@ body {
 
 .main-section .tool__container .music__card .progress-area .timer span {
   font-size: 0.7rem;
-  color: var(--shadow--1);
+  color: var(--timer-color);
 }
 
 .main-section .tool__container .music__card .controls {
@@ -688,6 +690,10 @@ body {
           box-shadow: 5px 5px 20px var(--shadow--1), -8px -8px 20px var(--shadow--2);
 }
 
+.main-section .tool__container .todo-list__card .task__list .task__container p {
+  color: var(--primary-color);
+}
+
 .main-section .tool__container .todo-list__card .task__list .task__container .btns {
   width: 3rem;
   display: -webkit-box;
@@ -702,6 +708,7 @@ body {
   border: none;
   outline: none;
   color: var(--primary-color);
+  background-color: var(--primary--bg);
   font-size: 1.2rem;
   cursor: pointer;
 }

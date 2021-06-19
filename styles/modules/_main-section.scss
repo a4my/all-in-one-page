@@ -171,7 +171,7 @@
 
                     span {
                         font-size: 0.7rem;
-                        color: var(--shadow--1);
+                        color: var(--timer-color);
                     }
                 }
             }
@@ -381,6 +381,10 @@
                     justify-content: space-between;
                     box-shadow: 5px 5px 20px var(--shadow--1), 
                     -8px -8px 20px var(--shadow--2);
+
+                    p {
+                        color: var(--primary-color);
+                    }
                     
     
                     .btns {
@@ -392,6 +396,7 @@
                             border: none;
                             outline: none;
                             color: var(--primary-color);
+                            background-color: var(--primary--bg);
                             font-size: 1.2rem;
                             cursor: pointer;
                         }
