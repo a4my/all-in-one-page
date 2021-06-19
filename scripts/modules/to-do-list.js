@@ -13,7 +13,7 @@ if(taskNumber < 0) {
 } else if(taskNumber > 5) {
     taskNumber = 5
 }
-// console.log(taskNumber)
+console.log(taskNumber)
 
 // Functions
 function addTask() {
@@ -58,7 +58,6 @@ function clickBtns(e) {
         const taskToRemove = item.parentElement.parentElement
         taskToRemove.remove()
         removeLocalTasks(taskToRemove)
-        taskNumber--
         newTask.value = ''
     }
 
@@ -67,7 +66,7 @@ function clickBtns(e) {
         taskToRemove.classList.toggle('completed')
         
     }
-    // console.log(taskNumber)
+    console.log(taskNumber)
 }
 
 function saveLocalTasks(task) {
@@ -79,6 +78,7 @@ function saveLocalTasks(task) {
     }
     tasks.push(task)
     localStorage.setItem('tasks', JSON.stringify(tasks))
+    taskNumber++
 }
 
 function getLocalTasks() {
@@ -116,7 +116,12 @@ function getLocalTasks() {
     
         taskContainer.appendChild(btnsContainer)
         taskList.appendChild(taskContainer)
+        
+        taskNumber++
     })
+
+    console.log(taskNumber)
+
 }   
 
 function removeLocalTasks(task) {
@@ -128,6 +133,7 @@ function removeLocalTasks(task) {
     }
     const taskIndex = task.children[0].innerText
     tasks.splice(tasks.indexOf(taskIndex), 1)
+    taskNumber--
     localStorage.setItem('tasks', JSON.stringify(tasks))
 }
 
@@ -138,14 +144,13 @@ addBtn.addEventListener('click', () => {
    if(newTask.value.trim() != '') {
        if(taskNumber < 5) {
            addTask()
-           taskNumber++
        } else {
            newTask.value = 'No more than 5 tasks!'
            setTimeout(function(){
                newTask.value = ''
            }, 1500)
        }
-    //    console.log(taskNumber)
+       console.log(taskNumber)
    }
 })
 
