@@ -37,12 +37,13 @@
                 padding: 1.7rem 1rem 1.7rem 0;
                 margin: 1.5rem 0;
                 background: transparent;
-                box-shadow: 5px 5px 5px #babecc, -5px -5px 10px #fff,
-                             inset 2px 2px 5px #babecc, 
-                            inset -5px -5px 10px #fff;
+                box-shadow: 5px 5px 5px var(--shadow--1), -5px -5px 10px var(--shadow--2),
+                             inset 2px 2px 5px var(--shadow--1), 
+                            inset -5px -5px 10px var(--shadow--2);
                 
                 &::placeholder {
                     font-size: 1.8rem;
+                    color: var(--input-color)
                 }
             }
             
@@ -65,17 +66,17 @@
 
                    
             .button:active {
-                box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+                box-shadow: inset 1px 1px 2px var(--shadow--1), inset -1px -1px 2px var(--shadow--2);
             }
             
             .clearButton {
-                background: #babecc;
-                color: white;
+                background: var(--shadow--1);
+                color: var(--shadow--2);
             }
             
             .mathbutton {
                 background: var(--primary-color);
-                color: white;
+                color: var(--shadow--2);
             }
         }
 
@@ -134,7 +135,7 @@
             .progress-area {
                 height: 6px;
                 width: 100%;
-                background: #babecc;
+                background: var(--shadow--1);
                 border-radius: 50px;
                 cursor: pointer;
 
@@ -170,7 +171,7 @@
 
                     span {
                         font-size: 0.7rem;
-                        color: #babecc;
+                        color: var(--shadow--1);
                     }
                 }
             }
@@ -191,7 +192,7 @@
                     align-items: center;
                     justify-content: center;
                     border-radius: 50%;
-                    box-shadow: -10px -10px 15px #fff, 
+                    box-shadow: -10px -10px 15px var(--shadow--2), 
                         10px 10px 15px rgba(70, 70, 70, 0.12);
 
                     i {
@@ -216,9 +217,9 @@
                 width: 100%;
                 background: var(--primary--bg);
                 border-radius: 1.5rem 1.5rem 2.5rem 2.5rem;
-                box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
-                box-shadow: -10px -10px 15px #fff, 
-                            10px 10px 15px rgba(70, 70, 70, 0.12);
+                box-shadow: 0px -5px 10px var(--shadow--1);
+                box-shadow: -10px -10px 15px var(--shadow--2), 
+                            10px 10px 15px var(--shadow--1);
                 transition: all .14s ease-out;
 
                 .header .row {
@@ -251,7 +252,7 @@
                     li {
                         cursor: pointer;
                         list-style: none;
-                        border-bottom: 1px solid #e5e5e5;
+                        border-bottom: 2px solid var(--shadow--2);
 
                         &:last-child {
                             border-bottom: 0px;
@@ -304,9 +305,9 @@
                         border: none;
                         border-radius: 3px;
                         outline: none;
-                        box-shadow: 5px 5px 5px #babecc, -5px -5px 10px #fff,
-                                 inset 2px 2px 5px #babecc, 
-                                inset -5px -5px 10px #fff;
+                        box-shadow: 5px 5px 5px var(--shadow--1), -5px -5px 10px var(--shadow--2),
+                                 inset 2px 2px 5px var(--shadow--1), 
+                                inset -5px -5px 10px var(--shadow--2);
                         height: 1.5rem;
                         margin-top: 0.5rem;
                         width: 5rem;
@@ -317,7 +318,7 @@
                     select {
                         text-align: center;
                         padding: 5px;
-                        color: #555;
+                        color: var(--input-color);
                         font-weight: 700;
                     }
                 }
@@ -336,7 +337,7 @@
                     background-color: var(--primary--bg);
                     border: none;
                     outline: none;
-                    color: #555;
+                    color: var(--input-color);
                     font-size: 1rem;
                     padding-left: 1rem;
                     width: 12rem;
@@ -347,10 +348,15 @@
                     border-radius: 30px;
                 }
 
+                input::placeholder {
+                    color: var(--input-color);
+                }
+
                 button {
                     border: none;
                     outline: none;
                     color: var(--primary-color);
+                    background-color: var(--primary--bg);
                     font-size: 1.2rem;
                     cursor: pointer;
                     height: 2.2rem;
@@ -359,8 +365,8 @@
                     align-items: center;
                     justify-content: center;
                     border-radius: 50%;
-                    box-shadow: -10px -10px 15px #fff, 
-                        10px 10px 15px rgba(70, 70, 70, 0.12);
+                    box-shadow: -10px -10px 15px var(--shadow--2), 
+                        10px 10px 15px var(--shadow--1);
                 }
             }
             

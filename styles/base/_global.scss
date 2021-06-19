@@ -6,15 +6,19 @@
 
   --shadow--1: #cbced1;
   --shadow--2: #fff;
+
+  --input-color: #555;
 }
 
 
 .darkmode {
   --primary-color: #39b385;
-  --dark-primary--bg: #0a3d62;
+  --primary--bg: #0a3d62;
 
-  --dark-shadow--1: #072d47;
-  --dark-shadow--2: #11619b;
+  --shadow--1: #072d47;
+  --shadow--2: #11619b;
+
+  --input-color: #39b385;
 }
 
 * {

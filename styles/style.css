@@ -4,13 +4,15 @@
   --primary--bg: #ecf0f3;
   --shadow--1: #cbced1;
   --shadow--2: #fff;
+  --input-color: #555;
 }
 
 .darkmode {
   --primary-color: #39b385;
-  --dark-primary--bg: #0a3d62;
-  --dark-shadow--1: #072d47;
-  --dark-shadow--2: #11619b;
+  --primary--bg: #0a3d62;
+  --shadow--1: #072d47;
+  --shadow--2: #11619b;
+  --input-color: #39b385;
 }
 
 * {
@@ -275,24 +277,28 @@ body {
   padding: 1.7rem 1rem 1.7rem 0;
   margin: 1.5rem 0;
   background: transparent;
-  -webkit-box-shadow: 5px 5px 5px #babecc, -5px -5px 10px #fff, inset 2px 2px 5px #babecc,  inset -5px -5px 10px #fff;
-          box-shadow: 5px 5px 5px #babecc, -5px -5px 10px #fff, inset 2px 2px 5px #babecc,  inset -5px -5px 10px #fff;
+  -webkit-box-shadow: 5px 5px 5px var(--shadow--1), -5px -5px 10px var(--shadow--2), inset 2px 2px 5px var(--shadow--1), inset -5px -5px 10px var(--shadow--2);
+          box-shadow: 5px 5px 5px var(--shadow--1), -5px -5px 10px var(--shadow--2), inset 2px 2px 5px var(--shadow--1), inset -5px -5px 10px var(--shadow--2);
 }
 
 .main-section .tool__container .calculator__card #display::-webkit-input-placeholder {
   font-size: 1.8rem;
+  color: var(--input-color);
 }
 
 .main-section .tool__container .calculator__card #display:-ms-input-placeholder {
   font-size: 1.8rem;
+  color: var(--input-color);
 }
 
 .main-section .tool__container .calculator__card #display::-ms-input-placeholder {
   font-size: 1.8rem;
+  color: var(--input-color);
 }
 
 .main-section .tool__container .calculator__card #display::placeholder {
   font-size: 1.8rem;
+  color: var(--input-color);
 }
 
 .main-section .tool__container .calculator__card .button {
@@ -313,18 +319,18 @@ body {
 }
 
 .main-section .tool__container .calculator__card .button:active {
-  -webkit-box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
-          box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+  -webkit-box-shadow: inset 1px 1px 2px var(--shadow--1), inset -1px -1px 2px var(--shadow--2);
+          box-shadow: inset 1px 1px 2px var(--shadow--1), inset -1px -1px 2px var(--shadow--2);
 }
 
 .main-section .tool__container .calculator__card .clearButton {
-  background: #babecc;
-  color: white;
+  background: var(--shadow--1);
+  color: var(--shadow--2);
 }
 
 .main-section .tool__container .calculator__card .mathbutton {
   background: var(--primary-color);
-  color: white;
+  color: var(--shadow--2);
 }
 
 .main-section .tool__container .music__card {
@@ -390,7 +396,7 @@ body {
 .main-section .tool__container .music__card .progress-area {
   height: 6px;
   width: 100%;
-  background: #babecc;
+  background: var(--shadow--1);
   border-radius: 50px;
   cursor: pointer;
 }
@@ -429,7 +435,7 @@ body {
 
 .main-section .tool__container .music__card .progress-area .timer span {
   font-size: 0.7rem;
-  color: #babecc;
+  color: var(--shadow--1);
 }
 
 .main-section .tool__container .music__card .controls {
@@ -457,8 +463,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 50%;
-  -webkit-box-shadow: -10px -10px 15px #fff, 10px 10px 15px rgba(70, 70, 70, 0.12);
-          box-shadow: -10px -10px 15px #fff, 10px 10px 15px rgba(70, 70, 70, 0.12);
+  -webkit-box-shadow: -10px -10px 15px var(--shadow--2), 10px 10px 15px rgba(70, 70, 70, 0.12);
+          box-shadow: -10px -10px 15px var(--shadow--2), 10px 10px 15px rgba(70, 70, 70, 0.12);
 }
 
 .main-section .tool__container .music__card .controls .play-pause i {
@@ -481,10 +487,10 @@ body {
   width: 100%;
   background: var(--primary--bg);
   border-radius: 1.5rem 1.5rem 2.5rem 2.5rem;
-  -webkit-box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: -10px -10px 15px #fff, 10px 10px 15px rgba(70, 70, 70, 0.12);
-          box-shadow: -10px -10px 15px #fff, 10px 10px 15px rgba(70, 70, 70, 0.12);
+  -webkit-box-shadow: 0px -5px 10px var(--shadow--1);
+          box-shadow: 0px -5px 10px var(--shadow--1);
+  -webkit-box-shadow: -10px -10px 15px var(--shadow--2), 10px 10px 15px var(--shadow--1);
+          box-shadow: -10px -10px 15px var(--shadow--2), 10px 10px 15px var(--shadow--1);
   -webkit-transition: all .14s ease-out;
   transition: all .14s ease-out;
 }
@@ -524,7 +530,7 @@ body {
 .main-section .tool__container .music__card .music-list ul li {
   cursor: pointer;
   list-style: none;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 2px solid var(--shadow--2);
 }
 
 .main-section .tool__container .music__card .music-list ul li:last-child {
@@ -581,8 +587,8 @@ body {
   border: none;
   border-radius: 3px;
   outline: none;
-  -webkit-box-shadow: 5px 5px 5px #babecc, -5px -5px 10px #fff, inset 2px 2px 5px #babecc,  inset -5px -5px 10px #fff;
-          box-shadow: 5px 5px 5px #babecc, -5px -5px 10px #fff, inset 2px 2px 5px #babecc,  inset -5px -5px 10px #fff;
+  -webkit-box-shadow: 5px 5px 5px var(--shadow--1), -5px -5px 10px var(--shadow--2), inset 2px 2px 5px var(--shadow--1), inset -5px -5px 10px var(--shadow--2);
+          box-shadow: 5px 5px 5px var(--shadow--1), -5px -5px 10px var(--shadow--2), inset 2px 2px 5px var(--shadow--1), inset -5px -5px 10px var(--shadow--2);
   height: 1.5rem;
   margin-top: 0.5rem;
   width: 5rem;
@@ -593,7 +599,7 @@ body {
 .main-section .tool__container .converter__card .converters .inputs select {
   text-align: center;
   padding: 5px;
-  color: #555;
+  color: var(--input-color);
   font-weight: 700;
 }
 
@@ -614,7 +620,7 @@ body {
   background-color: var(--primary--bg);
   border: none;
   outline: none;
-  color: #555;
+  color: var(--input-color);
   font-size: 1rem;
   padding-left: 1rem;
   width: 12rem;
@@ -626,10 +632,27 @@ body {
   border-radius: 30px;
 }
 
+.main-section .tool__container .todo-list__card .add-task__container input::-webkit-input-placeholder {
+  color: var(--input-color);
+}
+
+.main-section .tool__container .todo-list__card .add-task__container input:-ms-input-placeholder {
+  color: var(--input-color);
+}
+
+.main-section .tool__container .todo-list__card .add-task__container input::-ms-input-placeholder {
+  color: var(--input-color);
+}
+
+.main-section .tool__container .todo-list__card .add-task__container input::placeholder {
+  color: var(--input-color);
+}
+
 .main-section .tool__container .todo-list__card .add-task__container button {
   border: none;
   outline: none;
   color: var(--primary-color);
+  background-color: var(--primary--bg);
   font-size: 1.2rem;
   cursor: pointer;
   height: 2.2rem;
@@ -644,8 +667,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 50%;
-  -webkit-box-shadow: -10px -10px 15px #fff, 10px 10px 15px rgba(70, 70, 70, 0.12);
-          box-shadow: -10px -10px 15px #fff, 10px 10px 15px rgba(70, 70, 70, 0.12);
+  -webkit-box-shadow: -10px -10px 15px var(--shadow--2), 10px 10px 15px var(--shadow--1);
+          box-shadow: -10px -10px 15px var(--shadow--2), 10px 10px 15px var(--shadow--1);
 }
 
 .main-section .tool__container .todo-list__card .task__list .task__container {
@@ -799,7 +822,7 @@ body {
   background: none;
   width: 30rem;
   font-size: 18px;
-  color: #555;
+  color: var(--input-color);
   padding: 20px 10px 20px 15px;
   margin: 0 3rem;
   -webkit-transition: all .5s ease-in-out;
@@ -810,6 +833,22 @@ body {
   -webkit-box-shadow: 13px 13px 20px var(--shadow--1), -13px -13px 20px var(--shadow--2), inset 8px 8px 8px var(--shadow--1), inset -8px -8px 8px var(--shadow--2);
           box-shadow: 13px 13px 20px var(--shadow--1), -13px -13px 20px var(--shadow--2), inset 8px 8px 8px var(--shadow--1), inset -8px -8px 8px var(--shadow--2);
   border-radius: 30px;
+}
+
+.searchbar input::-webkit-input-placeholder {
+  color: var(--input-color);
+}
+
+.searchbar input:-ms-input-placeholder {
+  color: var(--input-color);
+}
+
+.searchbar input::-ms-input-placeholder {
+  color: var(--input-color);
+}
+
+.searchbar input::placeholder {
+  color: var(--input-color);
 }
 
 .searchbar p {
