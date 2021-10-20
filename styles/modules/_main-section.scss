@@ -31,6 +31,20 @@
       }
     }
 
+    // @media only screen and (max-width: 1400px) {
+    //   .calculator__card,
+    //   .music__card,
+    //   .converter__card,
+    //   .todo-list__card {
+    //     width: 15rem;
+    //     height: 26rem;
+    //     box-shadow: 13px 13px 20px var(--shadow--1),
+    //       -13px -13px 20px var(--shadow--2);
+    //     border-radius: 40px;
+    //     margin: 1rem auto;
+    //   }
+    // }
+
     .calculator__card {
       padding: 1.5rem;
       height: 30rem;
@@ -432,3 +446,9 @@
     height: 33rem;
   }
 }
+
+// @media only screen and (max-width: 1400px) {
+//   .main-section {
+//     height: 29rem;
+//   }
+// }
