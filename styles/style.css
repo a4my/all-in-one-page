@@ -31,7 +31,7 @@ html {
 
 body {
   background-color: var(--primary--bg);
-  color: #555;
+  color: var(--input-color);
   font-family: 'Poppins', sans-serif;
   height: 100vh;
   width: 100vw;
@@ -67,6 +67,17 @@ body {
   color: var(--primary-color);
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 1650px) {
+  .header .logo {
+    padding: 0.5rem;
+    width: 6rem;
+    height: 5rem;
+  }
+  .header .logo__text {
+    font-size: 1.4rem;
+  }
 }
 
 .header .clock {
@@ -135,6 +146,18 @@ body {
   font-size: 2rem;
 }
 
+@media only screen and (max-width: 1650px) {
+  .header .clock__container,
+  .header .date__container,
+  .header .dark-mode {
+    font-size: 1.5rem;
+  }
+  .header .dark-mode {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+
 .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,6 +174,12 @@ body {
           box-shadow: 13px 13px 20px var(--shadow--1), -13px -13px 20px var(--shadow--2);
   border-radius: 40px;
   margin: 1rem 10rem 2rem 10rem;
+}
+
+@media only screen and (max-width: 1650px) {
+  .info {
+    margin: 0.8rem 3rem;
+  }
 }
 
 .info .weather,
@@ -202,6 +231,17 @@ body {
   font-size: 2rem;
 }
 
+@media only screen and (max-width: 1650px) {
+  .info .weather__card h4,
+  .info .eth__card h4,
+  .info .btc__card h4,
+  .info .doge__card h4,
+  .info .ada__card h4 {
+    font-size: 1rem;
+    padding: 0 1.5rem;
+  }
+}
+
 .info .weather__card {
   margin-left: 2rem;
 }
@@ -226,6 +266,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin: 0 5rem;
 }
 
 .main-section .tool__container .calculator__card,
@@ -238,6 +279,15 @@ body {
           box-shadow: 13px 13px 20px var(--shadow--1), -13px -13px 20px var(--shadow--2);
   border-radius: 40px;
   margin: 1.5rem 3rem;
+}
+
+@media only screen and (max-width: 1650px) {
+  .main-section .tool__container .calculator__card,
+  .main-section .tool__container .music__card,
+  .main-section .tool__container .converter__card,
+  .main-section .tool__container .todo-list__card {
+    margin: 1.5rem auto;
+  }
 }
 
 .main-section .tool__container .calculator__card {
@@ -409,8 +459,8 @@ body {
   border-radius: inherit;
   background-color: var(--primary-color);
   opacity: 0;
-  -webkit-transition: opacity .2s ease;
-  transition: opacity .2s ease;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .main-section .tool__container .music__card .progress-area .timer {
@@ -475,8 +525,8 @@ body {
           box-shadow: 0px -5px 10px var(--shadow--1);
   -webkit-box-shadow: -10px -10px 15px var(--shadow--2), 10px 10px 15px var(--shadow--1);
           box-shadow: -10px -10px 15px var(--shadow--2), 10px 10px 15px var(--shadow--1);
-  -webkit-transition: all .14s ease-out;
-  transition: all .14s ease-out;
+  -webkit-transition: all 0.14s ease-out;
+  transition: all 0.14s ease-out;
 }
 
 .main-section .tool__container .music__card .music-list .header .row {
@@ -609,8 +659,8 @@ body {
   padding-left: 1rem;
   width: 12rem;
   height: 3rem;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   -webkit-box-shadow: inset 8px 8px 8px var(--shadow--1), inset -8px -8px 8px var(--shadow--2);
           box-shadow: inset 8px 8px 8px var(--shadow--1), inset -8px -8px 8px var(--shadow--2);
   border-radius: 30px;
@@ -705,6 +755,12 @@ body {
   font-style: italic;
 }
 
+@media only screen and (max-width: 1650px) {
+  .main-section {
+    height: 33rem;
+  }
+}
+
 .socials {
   position: absolute;
   top: 50%;
@@ -735,6 +791,15 @@ body {
   font-size: 2rem;
 }
 
+@media only screen and (max-width: 1650px) {
+  .socials {
+    padding: 0.5rem 0.7rem;
+  }
+  .socials a {
+    font-size: 1.8rem;
+  }
+}
+
 .tools {
   position: absolute;
   top: 50%;
@@ -762,7 +827,7 @@ body {
 
 .tools .google {
   font-size: 1.8rem;
-  margin-bottom: .2rem;
+  margin-bottom: 0.2rem;
 }
 
 .tools a {
@@ -773,6 +838,22 @@ body {
 .tools img {
   height: 2.8rem;
   width: 2.8rem;
+}
+
+@media only screen and (max-width: 1650px) {
+  .tools {
+    padding: 0.5rem 0.7rem;
+  }
+  .tools a {
+    font-size: 1.8rem;
+  }
+  .tools .google {
+    font-size: 1.5rem;
+  }
+  .tools img {
+    height: 2rem;
+    width: 2rem;
+  }
 }
 
 .searchbar {
