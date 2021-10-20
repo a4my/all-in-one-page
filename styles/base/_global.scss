@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-:root{
+:root {
   --primary-color: #39b385;
   --primary--bg: #ecf0f3;
 
@@ -11,34 +11,33 @@
   --input-color: #555;
 }
 
-
 .darkmode {
   --primary-color: #39b385;
   --primary--bg: #0a3d62;
 
   --shadow--1: #072d47;
   --shadow--2: #11619b;
-  
+
   --timer-color: #11619b;
   --input-color: #39b385;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 html {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--primary--bg);
-    color: #555;
-    font-family: 'Poppins', sans-serif;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    margin: 0;
+  background-color: var(--primary--bg);
+  color: var(--input-color);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
 }
