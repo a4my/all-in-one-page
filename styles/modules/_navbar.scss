@@ -1,102 +1,96 @@
 .header {
-    padding: 0.5rem 2rem 1rem 2rem;
+  padding: 0.5rem 2rem 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    box-shadow: 13px 13px 20px var(--shadow--1),
+      -13px -13px 20px var(--shadow--2);
+    border-radius: 30px;
+    width: 8rem;
+    height: 7rem;
+    padding: 1.5rem;
+
+    &__text {
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+
+  @media only screen and (max-width: 1650px) {
+    .logo {
+      padding: 0.5rem;
+      width: 6rem;
+      height: 5rem;
+
+      &__text {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .clock {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
-    .logo {
-        box-shadow: 13px 13px 20px var(--shadow--1), 
-                    -13px -13px 20px var(--shadow--2);
-        border-radius: 30px;
-        width: 8rem;
-        height: 7rem;
-        padding: 1.5rem;
-        
-        &__text {
-            text-align: center;
-            text-transform: uppercase;
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
+    &__container {
+      box-shadow: 13px 13px 20px var(--shadow--1),
+        -13px -13px 20px var(--shadow--2);
+      border-radius: 30px;
+      padding: 1rem;
+      font-size: 2rem;
+      color: var(--primary-color);
+      letter-spacing: 2px;
+      width: 16rem;
+      text-align: center;
+    }
+  }
+
+  .date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+      box-shadow: 13px 13px 20px var(--shadow--1),
+        -13px -13px 20px var(--shadow--2);
+      border-radius: 30px;
+      padding: 1rem;
+      font-size: 2rem;
+      color: var(--primary-color);
+      letter-spacing: 2px;
+    }
+  }
+
+  .dark-mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.5rem;
+    width: 4.5rem;
+    box-shadow: 13px 13px 20px var(--shadow--1),
+      -13px -13px 20px var(--shadow--2);
+    border-radius: 50%;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 1650px) {
+    .clock__container,
+    .date__container,
+    .dark-mode {
+      font-size: 1.5rem;
     }
 
-    .clock {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        &__container {
-            box-shadow: 13px 13px 20px var(--shadow--1), 
-                        -13px -13px 20px var(--shadow--2);
-            border-radius: 30px;
-            padding: 1rem;
-            font-size: 2rem;
-            color:  var(--primary-color);
-            letter-spacing: 2px;
-            width: 16rem;
-            text-align: center;
-        }
+    .dark-mode {
+      height: 3.5rem;
+      width: 3.5rem;
     }
-
-    .date {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        &__container {
-            box-shadow: 13px 13px 20px var(--shadow--1), 
-                        -13px -13px 20px var(--shadow--2);
-            border-radius: 30px;
-            padding: 1rem;
-            font-size: 2rem;
-            color:  var(--primary-color);
-            letter-spacing: 2px;
-        }
-    }
-
-    .dark-mode{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 4.5rem;
-        width: 4.5rem;
-        box-shadow: 13px 13px 20px var(--shadow--1), 
-                        -13px -13px 20px var(--shadow--2);
-        border-radius: 50%;
-        color: var(--primary-color);
-        cursor: pointer;
-        font-size: 2rem;
-
-        // input {
-        //     height: 4rem;
-        //     width: 4rem;
-        //     -webkit-appearance: none;
-        //     box-shadow: 13px 13px 20px var(--shadow--1), 
-        //                 -13px -13px 20px var(--shadow--2);
-        //     border-radius: 50%;
-        //     border: 8px solid var(--primary--bg);
-        //     outline: none;
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: center;
-        //     cursor: pointer;
-        // }
-    
-        // input::after {
-        //     font-family: 'Font Awesome 5 free';
-        //     content: '\f186';
-        //     color: var(--primary-color);
-        //     font-size: 1.7rem;        
-        // }
-
-        // input:checked {
-        //     box-shadow: 13px 13px 20px var(--shadow--1), 
-        //                 -13px -13px 20px var(--shadow--2),
-        //                 inset -13px -13px 20px var(--shadow--2), 
-        //                 inset 13px 13px 20px var(--shadow--1);
-        // }
-    }
-
+  }
 }
-
