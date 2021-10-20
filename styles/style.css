@@ -340,9 +340,20 @@ body {
   }
 }
 
+@media only screen and (max-width: 1400px) {
+  .main-section .tool__container .calculator__card,
+  .main-section .tool__container .music__card,
+  .main-section .tool__container .converter__card,
+  .main-section .tool__container .todo-list__card {
+    width: 16rem;
+    height: 24rem;
+    margin: 2rem auto 0.5rem auto;
+    padding: 1rem;
+  }
+}
+
 .main-section .tool__container .calculator__card {
   padding: 1.5rem;
-  height: 30rem;
 }
 
 .main-section .tool__container .calculator__card #display {
@@ -808,6 +819,12 @@ body {
 @media only screen and (max-width: 1650px) {
   .main-section {
     height: 33rem;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .main-section {
+    height: 27rem;
   }
 }
 
