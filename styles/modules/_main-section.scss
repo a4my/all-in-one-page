@@ -1,423 +1,434 @@
 .main-section {
-    width: 100%;
-    height: 35rem;
-    margin-bottom: 0;
-    
-    .tool__container {
+  width: 100%;
+  height: 35rem;
+  margin-bottom: 0;
+
+  .tool__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0 5rem;
+
+    .calculator__card,
+    .music__card,
+    .converter__card,
+    .todo-list__card {
+      width: 18rem;
+      height: 30rem;
+      box-shadow: 13px 13px 20px var(--shadow--1),
+        -13px -13px 20px var(--shadow--2);
+      border-radius: 40px;
+      margin: 1.5rem 3rem;
+    }
+
+    @media only screen and (max-width: 1650px) {
+      .calculator__card,
+      .music__card,
+      .converter__card,
+      .todo-list__card {
+        margin: 1.5rem auto;
+      }
+    }
+
+    .calculator__card {
+      padding: 1.5rem;
+      height: 30rem;
+
+      #display {
+        width: 15rem;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        color: var(--primary-color);
+        text-align: right;
+        font-weight: 700;
+        font-size: 1.8rem;
+        padding: 1.7rem 1rem 1.7rem 0;
+        margin: 1.5rem 0;
+        background: transparent;
+        box-shadow: 5px 5px 5px var(--shadow--1),
+          -5px -5px 10px var(--shadow--2), inset 2px 2px 5px var(--shadow--1),
+          inset -5px -5px 10px var(--shadow--2);
+
+        &::placeholder {
+          font-size: 1.8rem;
+          color: var(--input-color);
+        }
+      }
+
+      .button {
+        color: var(--primary-color);
+        margin: 15px 0 0 5px;
+        width: 3.2rem;
+        height: 3.2rem;
+        border: none;
+        outline: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: var(--primary--bg);
+        border-radius: 8px;
+        box-shadow: 5px 5px 10px var(--shadow--1),
+          -5px -5px 10px var(--shadow--2);
+        display: inline-block;
+      }
+
+      .button:active {
+        box-shadow: inset 1px 1px 2px var(--shadow--1),
+          inset -1px -1px 2px var(--shadow--2);
+      }
+
+      .clearButton {
+        background: var(--shadow--1);
+        color: var(--shadow--2);
+      }
+
+      .mathbutton {
+        background: var(--primary-color);
+        color: var(--shadow--2);
+      }
+    }
+
+    .music__card {
+      padding: 1.6rem 2rem;
+      color: var(--primary-color);
+      position: relative;
+
+      i {
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .top-bar,
+      .progress-area .timer,
+      .controls,
+      .music-list .header,
+      .music-list li {
         display: flex;
         align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        
-        .calculator__card,
-        .music__card,
-        .converter__card,
-        .todo-list__card {
-            width: 18rem;
-            height: 30rem;
-            box-shadow: 13px 13px 20px var(--shadow--1), 
-                        -13px -13px 20px var(--shadow--2);
-            border-radius: 40px;
-            margin: 1.5rem 3rem;
+        justify-content: space-between;
+      }
+
+      .top-bar {
+        pointer-events: none;
+      }
+
+      .img-area {
+        width: 100%;
+        height: 13rem;
+        background-color: var(--primary--bg);
+        border-radius: 30px;
+        border: 2px solid var(--primary--bg);
+        box-shadow: 13px 13px 20px var(--shadow--1),
+          -13px -13px 20px var(--shadow--2);
+        overflow: hidden;
+        margin-top: 1.2rem;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .song-details {
+        text-align: center;
+        margin: 0.8rem 0;
+        color: var(--primary-color);
+
+        .name {
+          font-size: 1.1rem;
         }
 
-        .calculator__card {
-            padding: 1.5rem;
-            height: 30rem;
+        .artist {
+          font-size: 1rem;
+        }
+      }
 
-            #display {
-                width: 15rem;
-                border-radius: 10px;
-                border: none;
-                outline: none;
-                color: var(--primary-color);
-                text-align: right;
-                font-weight: 700;
-                font-size: 1.8rem;
-                padding: 1.7rem 1rem 1.7rem 0;
-                margin: 1.5rem 0;
-                background: transparent;
-                box-shadow: 5px 5px 5px var(--shadow--1), -5px -5px 10px var(--shadow--2),
-                             inset 2px 2px 5px var(--shadow--1), 
-                            inset -5px -5px 10px var(--shadow--2);
-                
-                &::placeholder {
-                    font-size: 1.8rem;
-                    color: var(--input-color)
-                }
-            }
-            
-            .button {
-                color: var(--primary-color);
-                margin: 15px 0 0 5px;
-                width: 3.2rem;
-                height: 3.2rem;
-                border: none;
-                outline: none;
-                font-size: 1.5rem;
-                font-weight: bold;
-                cursor: pointer;
-                background-color: var(--primary--bg);
-                border-radius: 8px;
-                box-shadow: 5px 5px 10px var(--shadow--1), 
-                            -5px -5px 10px var(--shadow--2);
-                display: inline-block;
-            }
+      .progress-area {
+        height: 6px;
+        width: 100%;
+        background: var(--shadow--1);
+        border-radius: 50px;
+        cursor: pointer;
 
-                   
-            .button:active {
-                box-shadow: inset 1px 1px 2px var(--shadow--1), inset -1px -1px 2px var(--shadow--2);
-            }
-            
-            .clearButton {
-                background: var(--shadow--1);
-                color: var(--shadow--2);
-            }
-            
-            .mathbutton {
-                background: var(--primary-color);
-                color: var(--shadow--2);
-            }
+        &:hover .progress-bar::before {
+          opacity: 1;
         }
 
-        .music__card {
-            padding: 1.6rem 2rem;
-            color: var(--primary-color);
-            position: relative;
+        .progress-bar {
+          height: inherit;
+          width: 0%;
+          position: relative;
+          border-radius: inherit;
+          background: var(--primary-color);
 
-            i {
-                cursor: pointer;
-                font-size: 1rem; 
-            }
-
-            .top-bar, 
-            .progress-area .timer,
-            .controls,
-            .music-list .header,
-            .music-list li {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            .top-bar {
-                pointer-events: none;
-            }
-
-            .img-area {
-                width: 100%;
-                height: 13rem;
-                background-color: var(--primary--bg);
-                border-radius: 30px;
-                border: 2px solid var(--primary--bg);
-                box-shadow: 13px 13px 20px var(--shadow--1), 
-                            -13px -13px 20px var(--shadow--2);
-                overflow: hidden;
-                margin-top: 1.2rem;
-
-                img {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                }
-            }
-
-            .song-details {
-                text-align: center;
-                margin: 0.8rem 0;
-                color: var(--primary-color);
-
-                .name {
-                    font-size: 1.1rem;
-                }
-
-                .artist {
-                    font-size: 1rem;
-                }
-            }
-
-            .progress-area {
-                height: 6px;
-                width: 100%;
-                background: var(--shadow--1);
-                border-radius: 50px;
-                cursor: pointer;
-
-                &:hover .progress-bar::before {
-                    opacity: 1;
-                }
-
-                .progress-bar {
-                    height: inherit;
-                    width: 0%;
-                    position: relative;
-                    border-radius: inherit;
-                    background: var(--primary-color);
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        height: 0.8rem;
-                        width: 0.8rem;
-                        top: 50%;
-                        right: -5px;
-                        transform: translateY(-50%);
-                        border-radius: inherit;
-                        background-color: var(--primary-color);
-                        opacity: 0;
-                        transition: opacity .2s ease;
-                    }
-
-                }
-
-                .timer {
-                    margin-top: 0.2rem;
-
-                    span {
-                        font-size: 0.7rem;
-                        color: var(--timer-color);
-                    }
-                }
-            }
-
-            .controls {
-                margin: 2.5rem 0 0.3rem 0;
-
-                i {
-                    font-size: 1.4rem;
-                    user-select: none;
-                }
-
-                
-                .play-pause {
-                    height: 3.2rem;
-                    width: 3.2rem;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 50%;
-                    box-shadow: -10px -10px 15px var(--shadow--2), 
-                        10px 10px 15px rgba(70, 70, 70, 0.12);
-
-                    i {
-                        margin-left: 0.2rem;
-                    }
-                }
-            }
-
-            .music-list.show {
-                bottom: 0;
-                opacity: 1;
-                pointer-events: auto;  
-            }
-
-            .music-list {
-                position: absolute;
-                left: 0;
-                bottom: -35%;
-                opacity: 0;
-                pointer-events: none;
-                padding: 0.4rem 0.5rem 1.2rem 0.5rem;
-                width: 100%;
-                background: var(--primary--bg);
-                border-radius: 1.5rem 1.5rem 2.5rem 2.5rem;
-                box-shadow: 0px -5px 10px var(--shadow--1);
-                box-shadow: -10px -10px 15px var(--shadow--2), 
-                            10px 10px 15px var(--shadow--1);
-                transition: all .14s ease-out;
-
-                .header .row {
-                    display: flex;
-                    align-items: center;
-                    font-size: 1rem;
-
-                    i {
-                        cursor: default;
-                    }
-
-                    span {
-                        margin-left: 0.5rem;
-                    }
-                }
-                
-                .header #close {
-                    font-size: 1.3rem;
-                }
-
-                ul {
-                    margin: 0.1rem 0.3rem;
-                    max-height: 21rem;
-                    overflow-y: auto;
-
-                    &::-webkit-scrollbar{
-                        width: 0rem;
-                    }
-
-                    li {
-                        cursor: pointer;
-                        list-style: none;
-                        border-bottom: 2px solid var(--shadow--2);
-
-                        &:last-child {
-                            border-bottom: 0px;
-                        }
-
-                        .row span,
-                        .row p {
-                            font-size: 0.9rem;
-                        }
-                        
-                        .audio-duration {
-                            font-size: 0.8rem;
-                        }
-                    }
-
-                    .playing {
-                        font-weight: 700;
-                        pointer-events: none;
-                    }
-                }
-            }
+          &::before {
+            content: '';
+            position: absolute;
+            height: 0.8rem;
+            width: 0.8rem;
+            top: 50%;
+            right: -5px;
+            transform: translateY(-50%);
+            border-radius: inherit;
+            background-color: var(--primary-color);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+          }
         }
 
-        .converter__card {
-            padding: 1.6rem 2rem 1.6rem 2rem;
+        .timer {
+          margin-top: 0.2rem;
 
-            .converters {
-                margin-bottom: 1rem;
+          span {
+            font-size: 0.7rem;
+            color: var(--timer-color);
+          }
+        }
+      }
 
-                &__logo {
-                    color: var(--primary-color);
-                    font-size: 1.2rem;
-                }
+      .controls {
+        margin: 2.5rem 0 0.3rem 0;
 
-                &__table {
-                    margin-top: 0.5rem;
-                }
-
-                select {
-                    margin-left: 4rem;
-                }
-
-                .inputs {
-                    display: flex;
-                    justify-content: space-between;
-
-                    input,
-                    select {
-                        background-color: var(--primary--bg);
-                        border: none;
-                        border-radius: 3px;
-                        outline: none;
-                        box-shadow: 5px 5px 5px var(--shadow--1), -5px -5px 10px var(--shadow--2),
-                                 inset 2px 2px 5px var(--shadow--1), 
-                                inset -5px -5px 10px var(--shadow--2);
-                        height: 1.5rem;
-                        margin-top: 0.5rem;
-                        width: 5rem;
-                    }
-
-                    input,
-                    option,
-                    select {
-                        text-align: center;
-                        padding: 5px;
-                        color: var(--input-color);
-                        font-weight: 700;
-                    }
-                }
-            }
+        i {
+          font-size: 1.4rem;
+          user-select: none;
         }
 
-        .todo-list__card {
+        .play-pause {
+          height: 3.2rem;
+          width: 3.2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          box-shadow: -10px -10px 15px var(--shadow--2),
+            10px 10px 15px rgba(70, 70, 70, 0.12);
 
-            .add-task__container {
-                padding: 1.5rem 1.5rem 1rem 1.5rem;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                input {
-                    background-color: var(--primary--bg);
-                    border: none;
-                    outline: none;
-                    color: var(--input-color);
-                    font-size: 1rem;
-                    padding-left: 1rem;
-                    width: 12rem;
-                    height: 3rem;
-                    transition: all .3s ease-in-out;
-                    box-shadow: inset 8px 8px 8px var(--shadow--1), 
-                                inset -8px -8px 8px var(--shadow--2);
-                    border-radius: 30px;
-                }
-
-                input::placeholder {
-                    color: var(--input-color);
-                }
-
-                button {
-                    border: none;
-                    outline: none;
-                    color: var(--primary-color);
-                    background-color: var(--primary--bg);
-                    font-size: 1.2rem;
-                    cursor: pointer;
-                    height: 2.2rem;
-                    width: 2.2rem;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 50%;
-                    box-shadow: -10px -10px 15px var(--shadow--2), 
-                        10px 10px 15px var(--shadow--1);
-                }
-            }
-            
-            .task__list {
-                
-                .task__container {
-                    padding: 1rem;
-                    margin: 1rem 0.7rem;
-                    border-radius: 40px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    box-shadow: 5px 5px 20px var(--shadow--1), 
-                    -8px -8px 20px var(--shadow--2);
-
-                    p {
-                        color: var(--primary-color);
-                    }
-                    
-    
-                    .btns {
-                        width: 3rem;
-                        display:flex;
-                        justify-content: space-between;
-    
-                        button {
-                            border: none;
-                            outline: none;
-                            color: var(--primary-color);
-                            background-color: var(--primary--bg);
-                            font-size: 1.2rem;
-                            cursor: pointer;
-                        }
-                    }  
-                }
-
-                .fa-trash,
-                .fa-check {
-                    pointer-events: none;
-                }
-    
-                .completed {
-                    text-decoration: line-through;
-                    font-style: italic;
-                }
-            }
+          i {
+            margin-left: 0.2rem;
+          }
         }
+      }
+
+      .music-list.show {
+        bottom: 0;
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .music-list {
+        position: absolute;
+        left: 0;
+        bottom: -35%;
+        opacity: 0;
+        pointer-events: none;
+        padding: 0.4rem 0.5rem 1.2rem 0.5rem;
+        width: 100%;
+        background: var(--primary--bg);
+        border-radius: 1.5rem 1.5rem 2.5rem 2.5rem;
+        box-shadow: 0px -5px 10px var(--shadow--1);
+        box-shadow: -10px -10px 15px var(--shadow--2),
+          10px 10px 15px var(--shadow--1);
+        transition: all 0.14s ease-out;
+
+        .header .row {
+          display: flex;
+          align-items: center;
+          font-size: 1rem;
+
+          i {
+            cursor: default;
+          }
+
+          span {
+            margin-left: 0.5rem;
+          }
+        }
+
+        .header #close {
+          font-size: 1.3rem;
+        }
+
+        ul {
+          margin: 0.1rem 0.3rem;
+          max-height: 21rem;
+          overflow-y: auto;
+
+          &::-webkit-scrollbar {
+            width: 0rem;
+          }
+
+          li {
+            cursor: pointer;
+            list-style: none;
+            border-bottom: 2px solid var(--shadow--2);
+
+            &:last-child {
+              border-bottom: 0px;
+            }
+
+            .row span,
+            .row p {
+              font-size: 0.9rem;
+            }
+
+            .audio-duration {
+              font-size: 0.8rem;
+            }
+          }
+
+          .playing {
+            font-weight: 700;
+            pointer-events: none;
+          }
+        }
+      }
     }
+
+    .converter__card {
+      padding: 1.6rem 2rem 1.6rem 2rem;
+
+      .converters {
+        margin-bottom: 1rem;
+
+        &__logo {
+          color: var(--primary-color);
+          font-size: 1.2rem;
+        }
+
+        &__table {
+          margin-top: 0.5rem;
+        }
+
+        select {
+          margin-left: 4rem;
+        }
+
+        .inputs {
+          display: flex;
+          justify-content: space-between;
+
+          input,
+          select {
+            background-color: var(--primary--bg);
+            border: none;
+            border-radius: 3px;
+            outline: none;
+            box-shadow: 5px 5px 5px var(--shadow--1),
+              -5px -5px 10px var(--shadow--2),
+              inset 2px 2px 5px var(--shadow--1),
+              inset -5px -5px 10px var(--shadow--2);
+            height: 1.5rem;
+            margin-top: 0.5rem;
+            width: 5rem;
+          }
+
+          input,
+          option,
+          select {
+            text-align: center;
+            padding: 5px;
+            color: var(--input-color);
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .todo-list__card {
+      .add-task__container {
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        input {
+          background-color: var(--primary--bg);
+          border: none;
+          outline: none;
+          color: var(--input-color);
+          font-size: 1rem;
+          padding-left: 1rem;
+          width: 12rem;
+          height: 3rem;
+          transition: all 0.3s ease-in-out;
+          box-shadow: inset 8px 8px 8px var(--shadow--1),
+            inset -8px -8px 8px var(--shadow--2);
+          border-radius: 30px;
+        }
+
+        input::placeholder {
+          color: var(--input-color);
+        }
+
+        button {
+          border: none;
+          outline: none;
+          color: var(--primary-color);
+          background-color: var(--primary--bg);
+          font-size: 1.2rem;
+          cursor: pointer;
+          height: 2.2rem;
+          width: 2.2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          box-shadow: -10px -10px 15px var(--shadow--2),
+            10px 10px 15px var(--shadow--1);
+        }
+      }
+
+      .task__list {
+        .task__container {
+          padding: 1rem;
+          margin: 1rem 0.7rem;
+          border-radius: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          box-shadow: 5px 5px 20px var(--shadow--1),
+            -8px -8px 20px var(--shadow--2);
+
+          p {
+            color: var(--primary-color);
+          }
+
+          .btns {
+            width: 3rem;
+            display: flex;
+            justify-content: space-between;
+
+            button {
+              border: none;
+              outline: none;
+              color: var(--primary-color);
+              background-color: var(--primary--bg);
+              font-size: 1.2rem;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .fa-trash,
+        .fa-check {
+          pointer-events: none;
+        }
+
+        .completed {
+          text-decoration: line-through;
+          font-style: italic;
+        }
+      }
+    }
+  }
 }
 
+@media only screen and (max-width: 1650px) {
+  .main-section {
+    height: 33rem;
+  }
+}
