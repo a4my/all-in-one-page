@@ -80,6 +80,17 @@ body {
   }
 }
 
+@media only screen and (max-width: 1400px) {
+  .header .logo {
+    padding: 0.5rem;
+    width: 5rem;
+    height: 4rem;
+  }
+  .header .logo__text {
+    font-size: 1rem;
+  }
+}
+
 .header .clock {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,6 +169,18 @@ body {
   }
 }
 
+@media only screen and (max-width: 1400px) {
+  .header .clock__container,
+  .header .date__container,
+  .header .dark-mode {
+    font-size: 1.2rem;
+  }
+  .header .dark-mode {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
 .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -182,12 +205,28 @@ body {
   }
 }
 
+@media only screen and (max-width: 1400px) {
+  .info {
+    margin: 0.5rem 3rem 0.4rem 3rem;
+  }
+}
+
 .info .weather,
 .info .btc,
 .info .eth,
 .info .doge,
 .info .ada {
   margin: 0 2rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .info .weather,
+  .info .btc,
+  .info .eth,
+  .info .doge,
+  .info .ada {
+    margin: 0 1rem;
+  }
 }
 
 .info .doge img,
@@ -231,19 +270,30 @@ body {
   font-size: 2rem;
 }
 
+.info .weather__card {
+  margin-left: 2rem;
+}
+
 @media only screen and (max-width: 1650px) {
-  .info .weather__card h4,
-  .info .eth__card h4,
-  .info .btc__card h4,
-  .info .doge__card h4,
-  .info .ada__card h4 {
-    font-size: 1rem;
-    padding: 0 1.5rem;
+  .info h4 {
+    font-size: 0.8rem;
+    padding: 0 1rem;
   }
 }
 
-.info .weather__card {
-  margin-left: 2rem;
+@media only screen and (max-width: 1400px) {
+  .info p i {
+    font-size: 1.7rem;
+    padding-bottom: 0.7rem;
+  }
+  .info .weather__card {
+    margin-left: 1rem;
+  }
+  .info .doge img,
+  .info .ada img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
 }
 
 .main-section {
