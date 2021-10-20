@@ -12,12 +12,26 @@
     margin: 0.8rem 3rem;
   }
 
+  @media only screen and (max-width: 1400px) {
+    margin: 0.5rem 3rem 0.4rem 3rem;
+  }
+
   .weather,
   .btc,
   .eth,
   .doge,
   .ada {
     margin: 0 2rem;
+  }
+
+  @media only screen and (max-width: 1400px) {
+    .weather,
+    .btc,
+    .eth,
+    .doge,
+    .ada {
+      margin: 0 1rem;
+    }
   }
 
   .doge img,
@@ -45,16 +59,31 @@
     p {
       font-size: 2rem;
     }
-
-    @media only screen and (max-width: 1650px) {
-      h4 {
-        font-size: 1rem;
-        padding: 0 1.5rem;
-      }
-    }
   }
 
   .weather__card {
     margin-left: 2rem;
+  }
+
+  @media only screen and (max-width: 1650px) {
+    h4 {
+      font-size: 0.8rem;
+      padding: 0 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 1400px) {
+    p i {
+      font-size: 1.7rem;
+      padding-bottom: 0.7rem;
+    }
+    .weather__card {
+      margin-left: 1rem;
+    }
+    .doge img,
+    .ada img {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
   }
 }
