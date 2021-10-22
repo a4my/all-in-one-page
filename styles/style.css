@@ -487,6 +487,8 @@ body {
   -webkit-box-shadow: 13px 13px 20px var(--shadow--1), -13px -13px 20px var(--shadow--2);
           box-shadow: 13px 13px 20px var(--shadow--1), -13px -13px 20px var(--shadow--2);
   overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-top: 1.2rem;
 }
 
@@ -495,6 +497,14 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media only screen and (max-width: 1400px) {
+  .main-section .tool__container .music__card .img-area {
+    height: 11rem;
+    width: auto;
+    margin-top: 0.3rem;
+  }
 }
 
 .main-section .tool__container .music__card .song-details {
@@ -587,6 +597,12 @@ body {
 
 .main-section .tool__container .music__card .controls .play-pause i {
   margin-left: 0.2rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .main-section .tool__container .music__card .controls {
+    margin: 1rem 0 0.3rem 0;
+  }
 }
 
 .main-section .tool__container .music__card .music-list.show {
