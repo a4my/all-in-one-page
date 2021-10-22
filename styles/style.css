@@ -392,6 +392,15 @@ body {
   color: var(--input-color);
 }
 
+@media only screen and (max-width: 1400px) {
+  .main-section .tool__container .calculator__card #display {
+    max-width: 95%;
+    height: 3rem;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
 .main-section .tool__container .calculator__card .button {
   color: var(--primary-color);
   margin: 15px 0 0 5px;
@@ -409,6 +418,14 @@ body {
   display: inline-block;
 }
 
+@media only screen and (max-width: 1400px) {
+  .main-section .tool__container .calculator__card .button {
+    width: 2.8rem;
+    height: 2.8rem;
+    margin: 15px 0 0 5px;
+  }
+}
+
 .main-section .tool__container .calculator__card .button:active {
   -webkit-box-shadow: inset 1px 1px 2px var(--shadow--1), inset -1px -1px 2px var(--shadow--2);
           box-shadow: inset 1px 1px 2px var(--shadow--1), inset -1px -1px 2px var(--shadow--2);
@@ -422,6 +439,12 @@ body {
 .main-section .tool__container .calculator__card .mathbutton {
   background: var(--primary-color);
   color: var(--shadow--2);
+}
+
+@media only screen and (max-width: 1400px) {
+  .main-section .tool__container .calculator__card {
+    padding: 1rem;
+  }
 }
 
 .main-section .tool__container .music__card {
