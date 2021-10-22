@@ -45,7 +45,6 @@
 
     .calculator__card {
       padding: 1.5rem;
-      //   height: 30rem;
 
       #display {
         width: 15rem;
@@ -69,6 +68,15 @@
         }
       }
 
+      @media only screen and (max-width: 1400px) {
+        #display {
+          max-width: 95%;
+          height: 3rem;
+          padding: 1rem;
+          margin-top: 0.5rem;
+        }
+      }
+
       .button {
         color: var(--primary-color);
         margin: 15px 0 0 5px;
@@ -86,6 +94,14 @@
         display: inline-block;
       }
 
+      @media only screen and (max-width: 1400px) {
+        .button {
+          width: 2.8rem;
+          height: 2.8rem;
+          margin: 15px 0 0 5px;
+        }
+      }
+
       .button:active {
         box-shadow: inset 1px 1px 2px var(--shadow--1),
           inset -1px -1px 2px var(--shadow--2);
@@ -99,6 +115,12 @@
       .mathbutton {
         background: var(--primary-color);
         color: var(--shadow--2);
+      }
+    }
+
+    @media only screen and (max-width: 1400px) {
+      .calculator__card {
+        padding: 1rem;
       }
     }
 
