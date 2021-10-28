@@ -1044,8 +1044,8 @@ body {
   color: var(--input-color);
   padding: 20px 10px 20px 15px;
   margin: 0 3rem;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .searchbar input:focus {
@@ -1082,5 +1082,17 @@ body {
   outline: none;
   color: var(--primary-color);
   font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .searchbar {
+    height: 3.5rem;
+  }
+  .searchbar input {
+    height: 3.5rem;
+  }
+  .searchbar a {
+    margin-left: -6rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
