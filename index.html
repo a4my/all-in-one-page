@@ -1,255 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>All In One</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <div class="logo">
-            <p class="logo__text">All in <br>one</p>
-        </div>
-        <div class="date">
-            <div class="date__container"></div>
-        </div>
-        <div class="clock">
-            <div class="clock__container"></div>
-        </div>
-        <div id="dark-mode-toggle" class="dark-mode">
-            <!-- <input id="dark-mode-toggle" type="checkbox"> -->
-            <i class="far fa-moon"></i>
-        </div>
+      <div class="logo">
+        <p class="logo__text">All in <br />one</p>
+      </div>
+      <div class="date">
+        <div class="date__container"></div>
+      </div>
+      <div class="clock">
+        <div class="clock__container"></div>
+      </div>
+      <div id="dark-mode-toggle" class="dark-mode">
+        <!-- <input id="dark-mode-toggle" type="checkbox"> -->
+        <i class="far fa-moon"></i>
+      </div>
     </header>
 
     <section class="info">
-        <div class="weather">
-            <div class="weather__card">
-                <img src="" id="icon">
-                <h4><span id="temp"></span></h4>
-                <h4 id="weather"></h4>
-            </div>
+      <div class="weather">
+        <div class="weather__card">
+          <img src="" id="icon" />
+          <h4><span id="temp"></span></h4>
+          <h4 id="weather"></h4>
         </div>
-        <div class="btc">
-            <div class="btc__card">
-                <p><i class="fab fa-bitcoin"></i></p>
-                <h4 class="btc__price"></h4>
-                <h4 class="btc__percent"></h4>
-            </div>
+      </div>
+      <div class="btc">
+        <div class="btc__card">
+          <p><i class="fab fa-bitcoin"></i></p>
+          <h4 class="btc__price"></h4>
+          <h4 class="btc__percent"></h4>
         </div>
-        <div class="eth">
-            <div class="eth__card">
-                <p><i class="fab fa-ethereum"></i></p>
-                <h4 class="eth__price"></h4>
-                <h4 class="eth__percent"></h4>
-            </div>
+      </div>
+      <div class="eth">
+        <div class="eth__card">
+          <p><i class="fab fa-ethereum"></i></p>
+          <h4 class="eth__price"></h4>
+          <h4 class="eth__percent"></h4>
         </div>
-        <div class="doge">
-            <div class="doge__card">
-                <img src="./img/doge.png" alt="">
-                <h4 class="doge__price"></h4>
-                <h4 class="doge__percent"></h4>
-            </div>
+      </div>
+      <div class="doge">
+        <div class="doge__card">
+          <img src="./img/doge.png" alt="" />
+          <h4 class="doge__price"></h4>
+          <h4 class="doge__percent"></h4>
         </div>
-        <div class="ada">
-            <div class="ada__card">
-                <img src="./img/cardano.png" alt="">
-                <h4 class="ada__price"></h4>
-                <h4 class="ada__percent"></h4>
-            </div>
+      </div>
+      <div class="ada">
+        <div class="ada__card">
+          <img src="./img/cardano.png" alt="" />
+          <h4 class="ada__price"></h4>
+          <h4 class="ada__percent"></h4>
         </div>
+      </div>
     </section>
 
     <main class="main-section">
-        <div class="tool__container">
-            <div class="calculator__card">
-                    <form name="calculator">
-                        <input id="display" type="text" name="display" placeholder="0" readonly>
-                        <br>
-                        <input type="button" class="button" value="7" onclick="calculator.display.value += '7'">
-                        <input type="button" class="button" value="8" onclick="calculator.display.value += '8'">
-                        <input type="button" class="button" value="9" onclick="calculator.display.value += '9'">
-                        <input type="button" class="button mathbutton" value="+" onclick="calculator.display.value += '+'">
-                        <br>
-                        <input type="button" class="button" value="4" onclick="calculator.display.value += '4'">
-                        <input type="button" class="button" value="5" onclick="calculator.display.value += '5'">
-                        <input type="button" class="button" value="6" onclick="calculator.display.value += '6'">
-                        <input type="button" class="button mathbutton" value="-" onclick="calculator.display.value += '-'">
-                        <br>
-                        <input type="button" class="button" value="1" onclick="calculator.display.value += '1'">
-                        <input type="button" class="button" value="2" onclick="calculator.display.value += '2'">
-                        <input type="button" class="button" value="3" onclick="calculator.display.value += '3'">
-                        <input type="button" class="button mathbutton" value="x" onclick="calculator.display.value += '*'">
-                        <br>
-                        <input type="button" class="button clearButton" value="C" onclick="calculator.display.value = ''">
-                        <input type="button" class="button" value="0" onclick="calculator.display.value += '0'">
-                        <input type="button" class="button mathbutton" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
-                        <input type="button" class="button mathbutton" value="/" onclick="calculator.display.value += '/'">
-                    </form>
-            </div>
-            <div class="music__card">
-                <div class="top-bar">
-                    <i class="fas fa-chevron-down"></i>
-                    <span>Now Playing</span>
-                    <i class="fas fa-ellipsis-h"></i>
-                </div>
-                <div class="img-area">
-                    <img src="" alt="">
-                </div>
-                <div class="song-details">
-                    <p class="name"></p>
-                    <p class="artist"></p>
-                </div>
-                <div class="progress-area">
-                    <div class="progress-bar">
-                        <span></span>
-                    </div>
-                    <div class="timer">
-                        <span class="current">0:00</span>
-                        <span class="duration"></span>
-                    </div>
-                    <audio id="main-audio" src=""></audio>
-                </div>
-                <div class="controls">
-                    <i id="repeat-plist" class="fas fa-redo"></i>
-                    <i id="prev" class="fas fa-step-backward"></i>
-                    <div class="play-pause">
-                        <i class="fas fa-play"></i>
-                    </div>
-                    <i id="next" class="fas fa-step-forward"></i>
-                    <i id="more-music" class="fas fa-list-ul"></i>
-                </div>
-                <div class="music-list">
-                    <div class="header">
-                        <div class="row">
-                            <i class="fas fa-list-ul"></i>
-                            <span>Music List</span>
-                        </div>
-                        <i id="close" class="fas fa-times"></i>
-                    </div>
-                    <ul>
-                        
-                    </ul>
-                </div>
-            </div>
-            <div class="converter__card">
-                <div class="converters">
-                    <p class="converters__logo"><i class="fas fa-coins"></i></p>
-                    <div class="inputs">
-                        <input id="from-amount" type="text" size="7">
-                        <select class="currency">
-                            <option value="EUR">EUR</option>
-                            <option value="GBP" selected>GBP</option>
-                            <option value="USD">USD</option>
-                        </select>
-                    </div>
-                    <div class="inputs">
-                        <input id="to-amount" type="text" size="7" disabled>
-                        <select class="currency">
-                            <option value="EUR" selected>EUR</option>
-                            <option value="GBP" >GBP</option>
-                            <option value="USD">USD</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="converters">
-                    <p class="converters__logo"><i class="fas fa-weight-hanging"></i></p>
-                    <div class="inputs">
-                        <input id="from-weight" type="text" size="7">
-                        <select id="fromMasses">
-                            <option value="kg" selected>KG</option>
-                            <option value="lbs">LBS</option>
-                        </select>
-                    </div>
-                    <div class="inputs">
-                        <input id="to-weight" type="text" size="7" disabled>
-                        <select id="toMasses">
-                            <option value="lbs" selected>LBS</option>
-                            <option value="kg" >KG</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="converters">
-                    <p class="converters__logo"><i class="fas fa-ruler-vertical"></i></p>
-                    <div class="inputs">
-                        <input id="from-height" type="text" size="7">
-                        <select id="from-length">
-                            <option value="meter" selected>METER</option>
-                            <option value="feet">FEET</option>
-                        </select>
-                    </div>
-                    <div class="inputs">
-                        <input id="to-height" type="text" size="7" disabled>
-                        <select id="to-length">
-                            <option value="feet" selected>FEET</option>
-                            <option value="meter" >METER</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="converters">
-                    <p class="converters__logo"><i class="fas fa-ruler-horizontal"></i></p>
-                    <div class="inputs">
-                        <input id="from-distance" type="text" size="7">
-                        <select id="fromDistance">
-                            <option value="km" selected>KM</option>
-                            <option value="miles">MILES</option>
-                        </select>
-                    </div>
-                    <div class="inputs">
-                        <input id="to-distance" type="text" size="7" disabled>
-                        <select id="toDistance">
-                            <option value="miles" selected>MILES</option>
-                            <option value="km" >KM</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="todo-list__card">
-                <div class="add-task__container">
-                    <input id="addTask" type="text" size="15" maxlength="19" placeholder="Add a task on your list">
-                    <button id="addBtn">
-                        <i class="fas fa-plus">
-                    </i></button>
-                </div>
-                <div class="task__list">
-                    
-                </div>
-            </div>
+      <div class="tool__container">
+        <div class="calculator__card">
+          <form name="calculator">
+            <input
+              id="display"
+              type="text"
+              name="display"
+              placeholder="0"
+              readonly
+            />
+            <br />
+            <input
+              type="button"
+              class="button"
+              value="7"
+              onclick="calculator.display.value += '7'"
+            />
+            <input
+              type="button"
+              class="button"
+              value="8"
+              onclick="calculator.display.value += '8'"
+            />
+            <input
+              type="button"
+              class="button"
+              value="9"
+              onclick="calculator.display.value += '9'"
+            />
+            <input
+              type="button"
+              class="button mathbutton"
+              value="+"
+              onclick="calculator.display.value += '+'"
+            />
+            <br />
+            <input
+              type="button"
+              class="button"
+              value="4"
+              onclick="calculator.display.value += '4'"
+            />
+            <input
+              type="button"
+              class="button"
+              value="5"
+              onclick="calculator.display.value += '5'"
+            />
+            <input
+              type="button"
+              class="button"
+              value="6"
+              onclick="calculator.display.value += '6'"
+            />
+            <input
+              type="button"
+              class="button mathbutton"
+              value="-"
+              onclick="calculator.display.value += '-'"
+            />
+            <br />
+            <input
+              type="button"
+              class="button"
+              value="1"
+              onclick="calculator.display.value += '1'"
+            />
+            <input
+              type="button"
+              class="button"
+              value="2"
+              onclick="calculator.display.value += '2'"
+            />
+            <input
+              type="button"
+              class="button"
+              value="3"
+              onclick="calculator.display.value += '3'"
+            />
+            <input
+              type="button"
+              class="button mathbutton"
+              value="x"
+              onclick="calculator.display.value += '*'"
+            />
+            <br />
+            <input
+              type="button"
+              class="button clearButton"
+              value="C"
+              onclick="calculator.display.value = ''"
+            />
+            <input
+              type="button"
+              class="button"
+              value="0"
+              onclick="calculator.display.value += '0'"
+            />
+            <input
+              type="button"
+              class="button mathbutton"
+              value="="
+              onclick="calculator.display.value = eval(calculator.display.value)"
+            />
+            <input
+              type="button"
+              class="button mathbutton"
+              value="/"
+              onclick="calculator.display.value += '/'"
+            />
+          </form>
         </div>
+        <div class="music__card">
+          <div class="top-bar">
+            <i class="fas fa-chevron-down"></i>
+            <span>Now Playing</span>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <div class="img-area">
+            <img src="" alt="" />
+          </div>
+          <div class="song-details">
+            <p class="name"></p>
+            <p class="artist"></p>
+          </div>
+          <div class="progress-area">
+            <div class="progress-bar">
+              <span></span>
+            </div>
+            <div class="timer">
+              <span class="current">0:00</span>
+              <span class="duration"></span>
+            </div>
+            <audio id="main-audio" src=""></audio>
+          </div>
+          <div class="controls">
+            <i id="repeat-plist" class="fas fa-redo"></i>
+            <i id="prev" class="fas fa-step-backward"></i>
+            <div class="play-pause">
+              <i class="fas fa-play"></i>
+            </div>
+            <i id="next" class="fas fa-step-forward"></i>
+            <i id="more-music" class="fas fa-list-ul"></i>
+          </div>
+          <div class="music-list">
+            <div class="header">
+              <div class="row">
+                <i class="fas fa-list-ul"></i>
+                <span>Music List</span>
+              </div>
+              <i id="close" class="fas fa-times"></i>
+            </div>
+            <ul></ul>
+          </div>
+        </div>
+        <div class="converter__card">
+          <div class="converters">
+            <p id="coin-logo" class="converters__logo">
+              <i class="fas fa-coins"></i>
+            </p>
+            <div class="inputs">
+              <input id="from-amount" type="text" size="7" />
+              <select class="currency">
+                <option value="EUR">EUR</option>
+                <option value="GBP" selected>GBP</option>
+                <option value="USD">USD</option>
+              </select>
+            </div>
+            <div class="inputs">
+              <input id="to-amount" type="text" size="7" disabled />
+              <select class="currency">
+                <option value="EUR" selected>EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="USD">USD</option>
+              </select>
+            </div>
+          </div>
+          <div class="converters">
+            <p id="weight-logo" class="converters__logo">
+              <i class="fas fa-weight-hanging"></i>
+            </p>
+            <div class="inputs">
+              <input id="from-weight" type="text" size="7" />
+              <select id="fromMasses">
+                <option value="kg" selected>KG</option>
+                <option value="lbs">LBS</option>
+              </select>
+            </div>
+            <div class="inputs">
+              <input id="to-weight" type="text" size="7" disabled />
+              <select id="toMasses">
+                <option value="lbs" selected>LBS</option>
+                <option value="kg">KG</option>
+              </select>
+            </div>
+          </div>
+          <div class="converters">
+            <p id="meter-logo" class="converters__logo">
+              <i class="fas fa-ruler-vertical"></i>
+            </p>
+            <div class="inputs">
+              <input id="from-height" type="text" size="7" />
+              <select id="from-length">
+                <option value="meter" selected>METER</option>
+                <option value="feet">FEET</option>
+              </select>
+            </div>
+            <div class="inputs">
+              <input id="to-height" type="text" size="7" disabled />
+              <select id="to-length">
+                <option value="feet" selected>FEET</option>
+                <option value="meter">METER</option>
+              </select>
+            </div>
+          </div>
+          <div class="converters">
+            <p id="miles-logo" class="converters__logo">
+              <i class="fas fa-ruler-horizontal"></i>
+            </p>
+            <div class="inputs">
+              <input id="from-distance" type="text" size="7" />
+              <select id="fromDistance">
+                <option value="km" selected>KM</option>
+                <option value="miles">MILES</option>
+              </select>
+            </div>
+            <div class="inputs">
+              <input id="to-distance" type="text" size="7" disabled />
+              <select id="toDistance">
+                <option value="miles" selected>MILES</option>
+                <option value="km">KM</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="todo-list__card">
+          <div class="add-task__container">
+            <input
+              id="addTask"
+              type="text"
+              size="15"
+              maxlength="19"
+              placeholder="Add a task on your list"
+            />
+            <button id="addBtn">
+              <i class="fas fa-plus"> </i>
+            </button>
+          </div>
+          <div class="task__list"></div>
+        </div>
+      </div>
     </main>
 
     <aside class="socials">
-        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i></a>
-        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://mail.google.com/" target="_blank"><i class="fas fa-envelope-square"></i></a>
+      <a href="https://www.facebook.com/" target="_blank"
+        ><i class="fab fa-facebook-square"></i
+      ></a>
+      <a href="https://www.instagram.com/" target="_blank"
+        ><i class="fab fa-instagram-square"></i
+      ></a>
+      <a href="https://www.twitter.com/" target="_blank"
+        ><i class="fab fa-twitter-square"></i
+      ></a>
+      <a href="https://www.linkedin.com/" target="_blank"
+        ><i class="fab fa-linkedin"></i
+      ></a>
+      <a href="https://mail.google.com/" target="_blank"
+        ><i class="fas fa-envelope-square"></i
+      ></a>
     </aside>
 
     <aside class="tools">
-        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://stackoverflow.com/" target="_blank"><i class="fab fa-stack-overflow"></i></a>
-        <a class="google" href="https://google.com/" target="_blank"><i class="fab fa-google"></i></a>
-        <a href="https://udemy.com/" target="_blank"><img src="./img/udemy.png" alt=""></a>
+      <a href="https://github.com/" target="_blank"
+        ><i class="fab fa-github"></i
+      ></a>
+      <a href="https://youtube.com/" target="_blank"
+        ><i class="fab fa-youtube"></i
+      ></a>
+      <a href="https://stackoverflow.com/" target="_blank"
+        ><i class="fab fa-stack-overflow"></i
+      ></a>
+      <a class="google" href="https://google.com/" target="_blank"
+        ><i class="fab fa-google"></i
+      ></a>
+      <a href="https://udemy.com/" target="_blank"
+        ><img src="./img/udemy.png" alt=""
+      /></a>
     </aside>
 
     <section class="searchbar">
-        <p><i class="fab fa-google"></i></p>
-        <div class="searchbar__container">
-            <input id="search-input" type="text" placeholder="Search" maxlength="44">
-        </div>
-        <a id="search-btn" class="searchbar__google--btn" href="https://www.google.com" target="_blank"><i class="fas fa-search"></i></a>
-    </section>  
-    
+      <p><i class="fab fa-google"></i></p>
+      <div class="searchbar__container">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Search"
+          maxlength="44"
+        />
+      </div>
+      <a
+        id="search-btn"
+        class="searchbar__google--btn"
+        href="https://www.google.com"
+        target="_blank"
+        ><i class="fas fa-search"></i
+      ></a>
+    </section>
+
     <script src="./scripts/modules/info.js"></script>
     <script src="./scripts/modules/music-player.js"></script>
     <script src="./scripts/modules/converter.js"></script>
     <script src="./scripts/modules/to-do-list.js"></script>
     <script src="./scripts/modules/searchbar.js"></script>
     <script src="./scripts/modules/darkmode.js"></script>
-</body>
+  </body>
 </html>
