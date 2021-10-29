@@ -9,3 +9,4 @@ This page regroups information suchs as the date and time, live cryptocurrency r
 ## Demo [live preview](https://a4my.github.io/all-in-one-page/)
 
 ![site image](https://i.imgur.com/0wcN1ea.jpg)
+![site image](https://i.imgur.com/oiVPYXc.jpg)
