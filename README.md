@@ -20,4 +20,4 @@ I also wanted to use neumorphism design and to implement a dark mode feature.
 ## Responsiveness ❕
 Since this project is supposed to be a full page that you would normally keep open on the side, I did not make this project responsive on smartphone screens.
 
-## Author: [Alex Fourmy](https://www.linkedin.com/in/alex-fourmy/)
+### Author: [Alex Fourmy](https://www.linkedin.com/in/alex-fourmy/)
